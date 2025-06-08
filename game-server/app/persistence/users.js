@@ -2,6 +2,7 @@ var uuid = require('node-uuid');
 var util = require('util');
 var fs = require('fs');
 
+
 var UserStore = module.exports = {
     store  : './localstore/users.json',
     entity : 'users',
