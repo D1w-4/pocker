@@ -16,13 +16,11 @@ var UserStore = module.exports = {
                 me.persist({
                     id         : id,
                     username   : obj.username,
-                    password   : obj.password,
-                    email      : obj.email,
-                    chips      : obj.chips,
                     wins       : 0,
                     largestWin : 0,
                     friends    : [],
-                    created    : Date.now()
+                    created    : Date.now(),
+                    chips: 1000,
                 }, function(e, user){
                     if(e){
                         callback(e);

@@ -17,6 +17,11 @@ var GAME_SETTINGS = require('../../config/gameSettings.json');
  * @param {object} table instance of a table
  *
  */
+
+function generate4DigitCode() {
+    return Math.floor(Math.random() * 10000).toString().padStart(4, "0");
+}
+
 module.exports = Table = function(smallBlind, bigBlind, minPlayers, maxPlayers, minBuyIn, maxBuyIn, gameMode, table){
     this.smallBlind = smallBlind;
     this.bigBlind = bigBlind;
@@ -38,6 +43,7 @@ module.exports = Table = function(smallBlind, bigBlind, minPlayers, maxPlayers, 
     this.active = false;
     this.gameMode = gameMode;
     this.instance = table;
+    this.pin = generate4DigitCode();
     //Validate acceptable value ranges.
     var err;
     if(minPlayers < 2){ //require at least two players to start a game.

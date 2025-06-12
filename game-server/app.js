@@ -5,6 +5,7 @@ var tableComponent = require('./app/components/tableComponent');
 var botComponent = require('./app/components/botComponent');
 var stateComponent = require('./app/components/stateComponent');
 var ChatService = require('./app/services/chatService');
+var apiComponent = require('./app/components/apiComponent');
 
 var app = pomelo.createApp();
 app.set('name', 'poker-game-stack');
@@ -18,7 +19,8 @@ app.configure('production|development', function(){
 app.configure('production|development', 'game', function(){
     app.filter(abuseFilter());
     app.load(tableComponent);
-    app.load(botComponent);
+    // app.load(botComponent);
+		app.load(apiComponent(3051));
 //    app.load(stateComponent);
 });
 
