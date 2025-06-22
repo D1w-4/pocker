@@ -91,31 +91,21 @@
         "id": "04c3d4e0-7763-11e7-93fd-61bdb876f55d",
         "username": "admin",
         "password": "admin",
+        "admin": true,
         "email": "erik.jeurissen@gmail.com",
-        "chips": 93506,
+        "chips": 91506,
         "wins": 1,
         "largestWin": 2200,
         "friends": [],
         "created": 1501665282351
     },
-    "667d8330-4441-11f0-a7bd-dd059a82d1e0": {
-        "id": "667d8330-4441-11f0-a7bd-dd059a82d1e0",
-        "username": "dima",
-        "password": "12345",
-        "email": "test@test.ru",
-        "chips": 93500,
-        "wins": 1,
-        "largestWin": 1000,
-        "friends": [],
-        "created": 1749370813155
-    },
-    "580135c0-4777-11f0-9e9c-dd76f6cf8efa": {
-        "id": "580135c0-4777-11f0-9e9c-dd76f6cf8efa",
+    "3230aea0-4f4e-11f0-b48e-eb57f77f6ff2": {
+        "id": "3230aea0-4f4e-11f0-b48e-eb57f77f6ff2",
         "username": "D1w.4",
-        "wins": 1,
-        "largestWin": 15,
+        "wins": 0,
+        "largestWin": 0,
         "friends": [],
-        "created": 1749723835164,
-        "chips": 0
+        "created": 1750585771658,
+        "chips": 99000
     }
 }

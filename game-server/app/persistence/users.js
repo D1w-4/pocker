@@ -20,7 +20,7 @@ var UserStore = module.exports = {
                     largestWin : 0,
                     friends    : [],
                     created    : Date.now(),
-                    chips: 1000,
+                    chips: obj.chips,
                 }, function(e, user){
                     if(e){
                         callback(e);

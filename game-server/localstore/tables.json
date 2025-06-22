@@ -1778,5 +1778,1326 @@
             }
         ],
         "created": 1749724409924
+    },
+    "1fc27d20-4779-11f0-9c93-f306bec8ef4f": {
+        "id": "1fc27d20-4779-11f0-9c93-f306bec8ef4f",
+        "tid": "106e3bc0-4779-11f0-9c93-f306bec8ef4f",
+        "smallBlind": 5,
+        "bigBlind": 10,
+        "minBuyIn": 999,
+        "maxBuyIn": 1001,
+        "minPlayers": 2,
+        "maxPlayers": 10,
+        "gameMode": "normal",
+        "board": [
+            "5D",
+            "5S",
+            "4D",
+            "AC",
+            "JS"
+        ],
+        "creator": "580135c0-4777-11f0-9e9c-dd76f6cf8efa",
+        "players": [
+            {
+                "playerName": "D1w.4",
+                "id": "580135c0-4777-11f0-9e9c-dd76f6cf8efa",
+                "chips": 990,
+                "folded": false,
+                "allIn": false,
+                "talked": true,
+                "cards": [
+                    "6S",
+                    "9H"
+                ]
+            },
+            {
+                "playerName": "dima",
+                "id": "667d8330-4441-11f0-a7bd-dd059a82d1e0",
+                "chips": 1010,
+                "folded": true,
+                "allIn": false,
+                "talked": true,
+                "cards": [
+                    "JD",
+                    "TC"
+                ]
+            }
+        ],
+        "actions": [
+            {
+                "action": "call",
+                "playerName": "dima",
+                "amount": 10
+            },
+            {
+                "action": "call",
+                "playerName": "D1w.4",
+                "amount": 10
+            },
+            {
+                "action": "call",
+                "playerName": "dima",
+                "amount": 0
+            },
+            {
+                "action": "call",
+                "playerName": "D1w.4",
+                "amount": 0
+            },
+            {
+                "action": "call",
+                "playerName": "dima",
+                "amount": 0
+            },
+            {
+                "action": "call",
+                "playerName": "D1w.4",
+                "amount": 0
+            },
+            {
+                "action": "call",
+                "playerName": "dima",
+                "amount": 0
+            },
+            {
+                "action": "call",
+                "playerName": "D1w.4",
+                "amount": 0
+            }
+        ],
+        "gameWinners": [
+            {
+                "playerName": "dima",
+                "id": "667d8330-4441-11f0-a7bd-dd059a82d1e0",
+                "chips": 1010,
+                "amount": 20
+            }
+        ],
+        "created": 1749724826467
+    },
+    "c5484510-477c-11f0-9e2d-a3e636ccdcd2": {
+        "id": "c5484510-477c-11f0-9e2d-a3e636ccdcd2",
+        "tid": "bb2498e0-477c-11f0-9e2d-a3e636ccdcd2",
+        "smallBlind": 5,
+        "bigBlind": 10,
+        "minBuyIn": 999,
+        "maxBuyIn": 1001,
+        "minPlayers": 2,
+        "maxPlayers": 10,
+        "gameMode": "normal",
+        "board": [],
+        "creator": "580135c0-4777-11f0-9e9c-dd76f6cf8efa",
+        "players": [
+            {
+                "playerName": "dima",
+                "id": "667d8330-4441-11f0-a7bd-dd059a82d1e0",
+                "chips": 990,
+                "folded": true,
+                "allIn": false,
+                "talked": true,
+                "cards": [
+                    "JH",
+                    "7C"
+                ]
+            },
+            {
+                "playerName": "D1w.4",
+                "id": "580135c0-4777-11f0-9e9c-dd76f6cf8efa",
+                "chips": 1010,
+                "folded": true,
+                "allIn": false,
+                "talked": true,
+                "cards": [
+                    "6C",
+                    "4H"
+                ]
+            }
+        ],
+        "actions": [
+            {
+                "action": "call",
+                "playerName": "D1w.4",
+                "amount": 10
+            },
+            {
+                "action": "fold",
+                "playerName": "dima"
+            }
+        ],
+        "gameWinners": [
+            {
+                "playerName": "D1w.4",
+                "id": "580135c0-4777-11f0-9e9c-dd76f6cf8efa",
+                "chips": 1010,
+                "amount": 20
+            }
+        ],
+        "created": 1749726183458
+    },
+    "da00fce0-477c-11f0-9e2d-a3e636ccdcd2": {
+        "id": "da00fce0-477c-11f0-9e2d-a3e636ccdcd2",
+        "tid": "bb2498e0-477c-11f0-9e2d-a3e636ccdcd2",
+        "smallBlind": 5,
+        "bigBlind": 10,
+        "minBuyIn": 999,
+        "maxBuyIn": 1001,
+        "minPlayers": 2,
+        "maxPlayers": 10,
+        "gameMode": "normal",
+        "board": [
+            "7S",
+            "5C",
+            "KH",
+            "5H",
+            "6C"
+        ],
+        "creator": "580135c0-4777-11f0-9e9c-dd76f6cf8efa",
+        "players": [
+            {
+                "playerName": "dima",
+                "id": "667d8330-4441-11f0-a7bd-dd059a82d1e0",
+                "chips": 1050,
+                "folded": true,
+                "allIn": false,
+                "talked": true,
+                "cards": [
+                    "5D",
+                    "JD"
+                ]
+            },
+            {
+                "playerName": "D1w.4",
+                "id": "580135c0-4777-11f0-9e9c-dd76f6cf8efa",
+                "chips": 950,
+                "folded": false,
+                "allIn": false,
+                "talked": true,
+                "cards": [
+                    "7D",
+                    "9S"
+                ]
+            }
+        ],
+        "actions": [
+            {
+                "action": "call",
+                "playerName": "dima",
+                "amount": 10
+            },
+            {
+                "action": "bet",
+                "playerName": "D1w.4",
+                "amount": 30
+            },
+            {
+                "action": "call",
+                "playerName": "dima",
+                "amount": 30
+            },
+            {
+                "action": "call",
+                "playerName": "dima",
+                "amount": 0
+            },
+            {
+                "action": "bet",
+                "playerName": "D1w.4",
+                "amount": 20
+            },
+            {
+                "action": "call",
+                "playerName": "dima",
+                "amount": 20
+            },
+            {
+                "action": "call",
+                "playerName": "dima",
+                "amount": 0
+            },
+            {
+                "action": "call",
+                "playerName": "D1w.4",
+                "amount": 0
+            },
+            {
+                "action": "call",
+                "playerName": "dima",
+                "amount": 0
+            },
+            {
+                "action": "call",
+                "playerName": "D1w.4",
+                "amount": 0
+            }
+        ],
+        "gameWinners": [
+            {
+                "playerName": "dima",
+                "id": "667d8330-4441-11f0-a7bd-dd059a82d1e0",
+                "chips": 1050,
+                "amount": 100
+            }
+        ],
+        "created": 1749726304023
+    },
+    "3f7fa760-477d-11f0-9e2d-a3e636ccdcd2": {
+        "id": "3f7fa760-477d-11f0-9e2d-a3e636ccdcd2",
+        "tid": "bb2498e0-477c-11f0-9e2d-a3e636ccdcd2",
+        "smallBlind": 5,
+        "bigBlind": 10,
+        "minBuyIn": 999,
+        "maxBuyIn": 1001,
+        "minPlayers": 2,
+        "maxPlayers": 10,
+        "gameMode": "normal",
+        "board": [
+            "9D",
+            "8H",
+            "7S",
+            "KD",
+            "3C"
+        ],
+        "creator": "580135c0-4777-11f0-9e9c-dd76f6cf8efa",
+        "players": [
+            {
+                "playerName": "D1w.4",
+                "id": "580135c0-4777-11f0-9e9c-dd76f6cf8efa",
+                "chips": 0,
+                "folded": false,
+                "allIn": true,
+                "talked": true,
+                "cards": [
+                    "QH",
+                    "4H"
+                ]
+            },
+            {
+                "playerName": "dima",
+                "id": "667d8330-4441-11f0-a7bd-dd059a82d1e0",
+                "chips": 2000,
+                "folded": true,
+                "allIn": true,
+                "talked": true,
+                "cards": [
+                    "KH",
+                    "5S"
+                ]
+            }
+        ],
+        "actions": [
+            {
+                "action": "allin",
+                "playerName": "dima",
+                "amount": 995
+            },
+            {
+                "action": "allin",
+                "playerName": "D1w.4",
+                "amount": 990
+            }
+        ],
+        "gameWinners": [
+            {
+                "playerName": "dima",
+                "id": "667d8330-4441-11f0-a7bd-dd059a82d1e0",
+                "chips": 2000,
+                "amount": 2000
+            }
+        ],
+        "created": 1749726390405
+    },
+    "0ce7db50-49c2-11f0-9d9d-738b9ce23b91": {
+        "id": "0ce7db50-49c2-11f0-9d9d-738b9ce23b91",
+        "tid": "db40acd0-49c1-11f0-9d9d-738b9ce23b91",
+        "smallBlind": 5,
+        "bigBlind": 10,
+        "minBuyIn": 999,
+        "maxBuyIn": 1001,
+        "minPlayers": 2,
+        "maxPlayers": 10,
+        "gameMode": "normal",
+        "board": [
+            "8S",
+            "5D",
+            "7C",
+            "KC",
+            "7S"
+        ],
+        "creator": "580135c0-4777-11f0-9e9c-dd76f6cf8efa",
+        "players": [
+            {
+                "playerName": "D1w.4",
+                "id": "580135c0-4777-11f0-9e9c-dd76f6cf8efa",
+                "chips": 990,
+                "folded": false,
+                "allIn": false,
+                "talked": true,
+                "cards": [
+                    "3H",
+                    "TC"
+                ]
+            },
+            {
+                "playerName": "dima",
+                "id": "667d8330-4441-11f0-a7bd-dd059a82d1e0",
+                "chips": 1010,
+                "folded": true,
+                "allIn": false,
+                "talked": true,
+                "cards": [
+                    "6C",
+                    "8C"
+                ]
+            }
+        ],
+        "actions": [
+            {
+                "action": "call",
+                "playerName": "dima",
+                "amount": 10
+            },
+            {
+                "action": "call",
+                "playerName": "D1w.4",
+                "amount": 10
+            },
+            {
+                "action": "call",
+                "playerName": "dima",
+                "amount": 0
+            },
+            {
+                "action": "call",
+                "playerName": "D1w.4",
+                "amount": 0
+            },
+            {
+                "action": "call",
+                "playerName": "dima",
+                "amount": 0
+            },
+            {
+                "action": "call",
+                "playerName": "D1w.4",
+                "amount": 0
+            },
+            {
+                "action": "call",
+                "playerName": "dima",
+                "amount": 0
+            },
+            {
+                "action": "call",
+                "playerName": "D1w.4",
+                "amount": 0
+            }
+        ],
+        "gameWinners": [
+            {
+                "playerName": "dima",
+                "id": "667d8330-4441-11f0-a7bd-dd059a82d1e0",
+                "chips": 1010,
+                "amount": 20
+            }
+        ],
+        "created": 1749976002309
+    },
+    "ed954070-49c2-11f0-92e5-513f1ccad4d8": {
+        "id": "ed954070-49c2-11f0-92e5-513f1ccad4d8",
+        "tid": "bdddd400-49c2-11f0-92e5-513f1ccad4d8",
+        "smallBlind": 5,
+        "bigBlind": 10,
+        "minBuyIn": 999,
+        "maxBuyIn": 1001,
+        "minPlayers": 2,
+        "maxPlayers": 10,
+        "gameMode": "normal",
+        "board": [
+            "6H",
+            "6C",
+            "AC",
+            "8S",
+            "5S"
+        ],
+        "creator": "580135c0-4777-11f0-9e9c-dd76f6cf8efa",
+        "players": [
+            {
+                "playerName": "D1w.4",
+                "id": "580135c0-4777-11f0-9e9c-dd76f6cf8efa",
+                "chips": 990,
+                "folded": false,
+                "allIn": false,
+                "talked": true,
+                "cards": [
+                    "9H",
+                    "QH"
+                ]
+            },
+            {
+                "playerName": "dima",
+                "id": "667d8330-4441-11f0-a7bd-dd059a82d1e0",
+                "chips": 1010,
+                "folded": true,
+                "allIn": false,
+                "talked": true,
+                "cards": [
+                    "6S",
+                    "QD"
+                ]
+            }
+        ],
+        "actions": [
+            {
+                "action": "call",
+                "playerName": "dima",
+                "amount": 10
+            },
+            {
+                "action": "call",
+                "playerName": "D1w.4",
+                "amount": 10
+            },
+            {
+                "action": "call",
+                "playerName": "dima",
+                "amount": 0
+            },
+            {
+                "action": "call",
+                "playerName": "D1w.4",
+                "amount": 0
+            },
+            {
+                "action": "call",
+                "playerName": "dima",
+                "amount": 0
+            },
+            {
+                "action": "call",
+                "playerName": "D1w.4",
+                "amount": 0
+            },
+            {
+                "action": "call",
+                "playerName": "dima",
+                "amount": 0
+            },
+            {
+                "action": "call",
+                "playerName": "D1w.4",
+                "amount": 0
+            }
+        ],
+        "gameWinners": [
+            {
+                "playerName": "dima",
+                "id": "667d8330-4441-11f0-a7bd-dd059a82d1e0",
+                "chips": 1010,
+                "amount": 20
+            }
+        ],
+        "created": 1749976273088
+    },
+    "6d6831f0-49c7-11f0-811b-2f6f9284edf8": {
+        "id": "6d6831f0-49c7-11f0-811b-2f6f9284edf8",
+        "tid": "611d11e0-49c7-11f0-811b-2f6f9284edf8",
+        "smallBlind": 5,
+        "bigBlind": 10,
+        "minBuyIn": 999,
+        "maxBuyIn": 1001,
+        "minPlayers": 2,
+        "maxPlayers": 10,
+        "gameMode": "normal",
+        "board": [],
+        "creator": "580135c0-4777-11f0-9e9c-dd76f6cf8efa",
+        "players": [
+            {
+                "playerName": "D1w.4",
+                "id": "580135c0-4777-11f0-9e9c-dd76f6cf8efa",
+                "chips": 1005,
+                "folded": true,
+                "allIn": false,
+                "talked": false,
+                "cards": [
+                    "5H",
+                    "9S"
+                ]
+            },
+            {
+                "playerName": "dima",
+                "id": "667d8330-4441-11f0-a7bd-dd059a82d1e0",
+                "chips": 995,
+                "folded": true,
+                "allIn": false,
+                "talked": true,
+                "cards": [
+                    "TC",
+                    "6D"
+                ]
+            }
+        ],
+        "actions": [
+            {
+                "action": "fold",
+                "playerName": "dima"
+            }
+        ],
+        "gameWinners": [
+            {
+                "playerName": "D1w.4",
+                "id": "580135c0-4777-11f0-9e9c-dd76f6cf8efa",
+                "chips": 1005,
+                "amount": 15
+            }
+        ],
+        "created": 1749978163147
+    },
+    "30da38e0-49c8-11f0-b353-8372aaf80f9e": {
+        "id": "30da38e0-49c8-11f0-b353-8372aaf80f9e",
+        "tid": "2c2f4e70-49c8-11f0-b353-8372aaf80f9e",
+        "smallBlind": 5,
+        "bigBlind": 10,
+        "minBuyIn": 999,
+        "maxBuyIn": 1001,
+        "minPlayers": 2,
+        "maxPlayers": 10,
+        "gameMode": "normal",
+        "board": [],
+        "creator": "580135c0-4777-11f0-9e9c-dd76f6cf8efa",
+        "players": [
+            {
+                "playerName": "D1w.4",
+                "id": "580135c0-4777-11f0-9e9c-dd76f6cf8efa",
+                "chips": 1005,
+                "folded": true,
+                "allIn": false,
+                "talked": false,
+                "cards": [
+                    "KH",
+                    "QD"
+                ]
+            },
+            {
+                "playerName": "dima",
+                "id": "667d8330-4441-11f0-a7bd-dd059a82d1e0",
+                "chips": 995,
+                "folded": true,
+                "allIn": false,
+                "talked": true,
+                "cards": [
+                    "TS",
+                    "JS"
+                ]
+            }
+        ],
+        "actions": [
+            {
+                "action": "fold",
+                "playerName": "dima"
+            }
+        ],
+        "gameWinners": [
+            {
+                "playerName": "D1w.4",
+                "id": "580135c0-4777-11f0-9e9c-dd76f6cf8efa",
+                "chips": 1005,
+                "amount": 15
+            }
+        ],
+        "created": 1749978491046
+    },
+    "ae860170-49c8-11f0-b515-0fd0af8321d8": {
+        "id": "ae860170-49c8-11f0-b515-0fd0af8321d8",
+        "tid": "a9e9bd00-49c8-11f0-b515-0fd0af8321d8",
+        "smallBlind": 5,
+        "bigBlind": 10,
+        "minBuyIn": 999,
+        "maxBuyIn": 1001,
+        "minPlayers": 2,
+        "maxPlayers": 10,
+        "gameMode": "normal",
+        "board": [],
+        "creator": "580135c0-4777-11f0-9e9c-dd76f6cf8efa",
+        "players": [
+            {
+                "playerName": "D1w.4",
+                "id": "580135c0-4777-11f0-9e9c-dd76f6cf8efa",
+                "chips": 1005,
+                "folded": true,
+                "allIn": false,
+                "talked": false,
+                "cards": [
+                    "2C",
+                    "2D"
+                ]
+            },
+            {
+                "playerName": "dima",
+                "id": "667d8330-4441-11f0-a7bd-dd059a82d1e0",
+                "chips": 995,
+                "folded": true,
+                "allIn": false,
+                "talked": true,
+                "cards": [
+                    "9D",
+                    "2H"
+                ]
+            }
+        ],
+        "actions": [
+            {
+                "action": "fold",
+                "playerName": "dima"
+            }
+        ],
+        "gameWinners": [
+            {
+                "playerName": "D1w.4",
+                "id": "580135c0-4777-11f0-9e9c-dd76f6cf8efa",
+                "chips": 1005,
+                "amount": 15
+            }
+        ],
+        "created": 1749978701895
+    },
+    "dc679c70-49c8-11f0-acef-7d94a5929c7a": {
+        "id": "dc679c70-49c8-11f0-acef-7d94a5929c7a",
+        "tid": "d8596730-49c8-11f0-acef-7d94a5929c7a",
+        "smallBlind": 5,
+        "bigBlind": 10,
+        "minBuyIn": 999,
+        "maxBuyIn": 1001,
+        "minPlayers": 2,
+        "maxPlayers": 10,
+        "gameMode": "normal",
+        "board": [],
+        "creator": "580135c0-4777-11f0-9e9c-dd76f6cf8efa",
+        "players": [
+            {
+                "playerName": "D1w.4",
+                "id": "580135c0-4777-11f0-9e9c-dd76f6cf8efa",
+                "chips": 1005,
+                "folded": true,
+                "allIn": false,
+                "talked": false,
+                "cards": [
+                    "5H",
+                    "TS"
+                ]
+            },
+            {
+                "playerName": "dima",
+                "id": "667d8330-4441-11f0-a7bd-dd059a82d1e0",
+                "chips": 995,
+                "folded": true,
+                "allIn": false,
+                "talked": true,
+                "cards": [
+                    "KD",
+                    "8D"
+                ]
+            }
+        ],
+        "actions": [
+            {
+                "action": "fold",
+                "playerName": "dima"
+            }
+        ],
+        "gameWinners": [
+            {
+                "playerName": "D1w.4",
+                "id": "580135c0-4777-11f0-9e9c-dd76f6cf8efa",
+                "chips": 1005,
+                "amount": 15
+            }
+        ],
+        "created": 1749978778865
+    },
+    "d8bdfff0-49c9-11f0-a1c6-3f066742ffef": {
+        "id": "d8bdfff0-49c9-11f0-a1c6-3f066742ffef",
+        "tid": "d4090360-49c9-11f0-a1c6-3f066742ffef",
+        "smallBlind": 5,
+        "bigBlind": 10,
+        "minBuyIn": 999,
+        "maxBuyIn": 1001,
+        "minPlayers": 2,
+        "maxPlayers": 10,
+        "gameMode": "normal",
+        "board": [],
+        "creator": "580135c0-4777-11f0-9e9c-dd76f6cf8efa",
+        "players": [
+            {
+                "playerName": "D1w.4",
+                "id": "580135c0-4777-11f0-9e9c-dd76f6cf8efa",
+                "chips": 1005,
+                "folded": true,
+                "allIn": false,
+                "talked": false,
+                "cards": [
+                    "KC",
+                    "7H"
+                ]
+            },
+            {
+                "playerName": "dima",
+                "id": "667d8330-4441-11f0-a7bd-dd059a82d1e0",
+                "chips": 995,
+                "folded": true,
+                "allIn": false,
+                "talked": true,
+                "cards": [
+                    "8D",
+                    "8S"
+                ]
+            }
+        ],
+        "actions": [
+            {
+                "action": "fold",
+                "playerName": "dima"
+            }
+        ],
+        "gameWinners": [
+            {
+                "playerName": "D1w.4",
+                "id": "580135c0-4777-11f0-9e9c-dd76f6cf8efa",
+                "chips": 1005,
+                "amount": 15
+            }
+        ],
+        "created": 1749979202237
+    },
+    "6a164b00-49cb-11f0-9b2e-2fd453b8c7d6": {
+        "id": "6a164b00-49cb-11f0-9b2e-2fd453b8c7d6",
+        "tid": "483ef680-49cb-11f0-9b2e-2fd453b8c7d6",
+        "smallBlind": 5,
+        "bigBlind": 10,
+        "minBuyIn": 999,
+        "maxBuyIn": 1001,
+        "minPlayers": 2,
+        "maxPlayers": 10,
+        "gameMode": "normal",
+        "board": [],
+        "creator": "580135c0-4777-11f0-9e9c-dd76f6cf8efa",
+        "players": [
+            {
+                "playerName": "D1w.4",
+                "id": "580135c0-4777-11f0-9e9c-dd76f6cf8efa",
+                "chips": 1005,
+                "folded": true,
+                "allIn": false,
+                "talked": false,
+                "cards": [
+                    "5C",
+                    "KH"
+                ]
+            },
+            {
+                "playerName": "dima",
+                "id": "667d8330-4441-11f0-a7bd-dd059a82d1e0",
+                "chips": 995,
+                "folded": true,
+                "allIn": false,
+                "talked": true,
+                "cards": [
+                    "TC",
+                    "AS"
+                ]
+            }
+        ],
+        "actions": [
+            {
+                "action": "fold",
+                "playerName": "dima"
+            }
+        ],
+        "gameWinners": [
+            {
+                "playerName": "D1w.4",
+                "id": "580135c0-4777-11f0-9e9c-dd76f6cf8efa",
+                "chips": 1005,
+                "amount": 15
+            }
+        ],
+        "created": 1749979875570
+    },
+    "08964ff0-49cc-11f0-bd6a-6ffc2218547b": {
+        "id": "08964ff0-49cc-11f0-bd6a-6ffc2218547b",
+        "tid": "025f4740-49cc-11f0-bd6a-6ffc2218547b",
+        "smallBlind": 5,
+        "bigBlind": 10,
+        "minBuyIn": 999,
+        "maxBuyIn": 1001,
+        "minPlayers": 2,
+        "maxPlayers": 10,
+        "gameMode": "normal",
+        "board": [],
+        "creator": "580135c0-4777-11f0-9e9c-dd76f6cf8efa",
+        "players": [
+            {
+                "playerName": "D1w.4",
+                "id": "580135c0-4777-11f0-9e9c-dd76f6cf8efa",
+                "chips": 1005,
+                "folded": true,
+                "allIn": false,
+                "talked": false,
+                "cards": [
+                    "2C",
+                    "3D"
+                ]
+            },
+            {
+                "playerName": "dima",
+                "id": "667d8330-4441-11f0-a7bd-dd059a82d1e0",
+                "chips": 995,
+                "folded": true,
+                "allIn": false,
+                "talked": true,
+                "cards": [
+                    "8S",
+                    "3C"
+                ]
+            }
+        ],
+        "actions": [
+            {
+                "action": "fold",
+                "playerName": "dima"
+            }
+        ],
+        "gameWinners": [
+            {
+                "playerName": "D1w.4",
+                "id": "580135c0-4777-11f0-9e9c-dd76f6cf8efa",
+                "chips": 1005,
+                "amount": 15
+            }
+        ],
+        "created": 1749980141487
+    },
+    "abd0f6c0-49cc-11f0-aa23-09a3bde5031f": {
+        "id": "abd0f6c0-49cc-11f0-aa23-09a3bde5031f",
+        "tid": "a51e5570-49cc-11f0-aa23-09a3bde5031f",
+        "smallBlind": 5,
+        "bigBlind": 10,
+        "minBuyIn": 999,
+        "maxBuyIn": 1001,
+        "minPlayers": 2,
+        "maxPlayers": 10,
+        "gameMode": "normal",
+        "board": [],
+        "creator": "580135c0-4777-11f0-9e9c-dd76f6cf8efa",
+        "players": [
+            {
+                "playerName": "D1w.4",
+                "id": "580135c0-4777-11f0-9e9c-dd76f6cf8efa",
+                "chips": 1005,
+                "folded": true,
+                "allIn": false,
+                "talked": false,
+                "cards": [
+                    "JC",
+                    "3D"
+                ]
+            },
+            {
+                "playerName": "dima",
+                "id": "667d8330-4441-11f0-a7bd-dd059a82d1e0",
+                "chips": 995,
+                "folded": true,
+                "allIn": false,
+                "talked": true,
+                "cards": [
+                    "KH",
+                    "7D"
+                ]
+            }
+        ],
+        "actions": [
+            {
+                "action": "fold",
+                "playerName": "dima"
+            }
+        ],
+        "gameWinners": [
+            {
+                "playerName": "D1w.4",
+                "id": "580135c0-4777-11f0-9e9c-dd76f6cf8efa",
+                "chips": 1005,
+                "amount": 15
+            }
+        ],
+        "created": 1749980415338
+    },
+    "9dcc4960-49d8-11f0-b144-5118d21d1b86": {
+        "id": "9dcc4960-49d8-11f0-b144-5118d21d1b86",
+        "tid": "8ccc7ae0-49d8-11f0-b144-5118d21d1b86",
+        "smallBlind": 5,
+        "bigBlind": 10,
+        "minBuyIn": 999,
+        "maxBuyIn": 1001,
+        "minPlayers": 2,
+        "maxPlayers": 10,
+        "gameMode": "normal",
+        "board": [],
+        "creator": "580135c0-4777-11f0-9e9c-dd76f6cf8efa",
+        "players": [
+            {
+                "playerName": "D1w.4",
+                "id": "580135c0-4777-11f0-9e9c-dd76f6cf8efa",
+                "chips": 990,
+                "folded": true,
+                "allIn": false,
+                "talked": true,
+                "cards": [
+                    "QH",
+                    "AD"
+                ]
+            },
+            {
+                "playerName": "dima",
+                "id": "667d8330-4441-11f0-a7bd-dd059a82d1e0",
+                "chips": 1005,
+                "folded": true,
+                "allIn": false,
+                "talked": true,
+                "cards": [
+                    "2C",
+                    "JD"
+                ]
+            },
+            {
+                "playerName": "D1w.4",
+                "id": "580135c0-4777-11f0-9e9c-dd76f6cf8efa",
+                "chips": 990,
+                "folded": true,
+                "allIn": false,
+                "talked": true,
+                "cards": [
+                    "QH",
+                    "AD"
+                ]
+            }
+        ],
+        "actions": [
+            {
+                "action": "fold",
+                "playerName": "D1w.4"
+            },
+            {
+                "action": "call",
+                "playerName": "dima",
+                "amount": 5
+            },
+            {
+                "action": "fold",
+                "playerName": "D1w.4"
+            }
+        ],
+        "gameWinners": [
+            {
+                "playerName": "dima",
+                "id": "667d8330-4441-11f0-a7bd-dd059a82d1e0",
+                "chips": 1005,
+                "amount": 10
+            }
+        ],
+        "created": 1749985605792
+    },
+    "65283f40-49da-11f0-a594-8d6299877a84": {
+        "id": "65283f40-49da-11f0-a594-8d6299877a84",
+        "tid": "24eee6e0-49da-11f0-a594-8d6299877a84",
+        "smallBlind": 5,
+        "bigBlind": 10,
+        "minBuyIn": 999,
+        "maxBuyIn": 1001,
+        "minPlayers": 2,
+        "maxPlayers": 10,
+        "gameMode": "normal",
+        "board": [],
+        "creator": "580135c0-4777-11f0-9e9c-dd76f6cf8efa",
+        "players": [
+            {
+                "playerName": "D1w.4",
+                "id": "580135c0-4777-11f0-9e9c-dd76f6cf8efa",
+                "chips": 1005,
+                "folded": true,
+                "allIn": false,
+                "talked": false,
+                "cards": [
+                    "8H",
+                    "6H"
+                ]
+            },
+            {
+                "playerName": "dima",
+                "id": "667d8330-4441-11f0-a7bd-dd059a82d1e0",
+                "chips": 995,
+                "folded": true,
+                "allIn": false,
+                "talked": true,
+                "cards": [
+                    "7S",
+                    "QC"
+                ]
+            }
+        ],
+        "actions": [
+            {
+                "action": "fold",
+                "playerName": "dima"
+            }
+        ],
+        "gameWinners": [
+            {
+                "playerName": "D1w.4",
+                "id": "580135c0-4777-11f0-9e9c-dd76f6cf8efa",
+                "chips": 1005,
+                "amount": 15
+            }
+        ],
+        "created": 1749986309747
+    },
+    "de5eac50-49da-11f0-a594-8d6299877a84": {
+        "id": "de5eac50-49da-11f0-a594-8d6299877a84",
+        "tid": "24eee6e0-49da-11f0-a594-8d6299877a84",
+        "smallBlind": 5,
+        "bigBlind": 10,
+        "minBuyIn": 999,
+        "maxBuyIn": 1001,
+        "minPlayers": 2,
+        "maxPlayers": 10,
+        "gameMode": "normal",
+        "board": [],
+        "creator": "580135c0-4777-11f0-9e9c-dd76f6cf8efa",
+        "players": [
+            {
+                "playerName": "dima",
+                "id": "667d8330-4441-11f0-a7bd-dd059a82d1e0",
+                "chips": 995,
+                "folded": true,
+                "allIn": false,
+                "talked": true,
+                "cards": [
+                    "8S",
+                    "2H"
+                ]
+            },
+            {
+                "playerName": "D1w.4",
+                "id": "580135c0-4777-11f0-9e9c-dd76f6cf8efa",
+                "chips": 1005,
+                "folded": true,
+                "allIn": false,
+                "talked": false,
+                "cards": [
+                    "7S",
+                    "4H"
+                ]
+            }
+        ],
+        "actions": [
+            {
+                "action": "fold",
+                "playerName": "dima"
+            }
+        ],
+        "gameWinners": [
+            {
+                "playerName": "D1w.4",
+                "id": "580135c0-4777-11f0-9e9c-dd76f6cf8efa",
+                "chips": 1005,
+                "amount": 15
+            }
+        ],
+        "created": 1749986513105
+    },
+    "04290cf0-49db-11f0-a594-8d6299877a84": {
+        "id": "04290cf0-49db-11f0-a594-8d6299877a84",
+        "tid": "24eee6e0-49da-11f0-a594-8d6299877a84",
+        "smallBlind": 5,
+        "bigBlind": 10,
+        "minBuyIn": 999,
+        "maxBuyIn": 1001,
+        "minPlayers": 2,
+        "maxPlayers": 10,
+        "gameMode": "normal",
+        "board": [],
+        "creator": "580135c0-4777-11f0-9e9c-dd76f6cf8efa",
+        "players": [
+            {
+                "playerName": "dima",
+                "id": "667d8330-4441-11f0-a7bd-dd059a82d1e0",
+                "chips": 1005,
+                "folded": true,
+                "allIn": false,
+                "talked": false,
+                "cards": [
+                    "9H",
+                    "TS"
+                ]
+            },
+            {
+                "playerName": "D1w.4",
+                "id": "580135c0-4777-11f0-9e9c-dd76f6cf8efa",
+                "chips": 995,
+                "folded": true,
+                "allIn": false,
+                "talked": true,
+                "cards": [
+                    "TC",
+                    "JS"
+                ]
+            }
+        ],
+        "actions": [
+            {
+                "action": "fold",
+                "playerName": "D1w.4"
+            }
+        ],
+        "gameWinners": [
+            {
+                "playerName": "dima",
+                "id": "667d8330-4441-11f0-a7bd-dd059a82d1e0",
+                "chips": 1005,
+                "amount": 15
+            }
+        ],
+        "created": 1749986576510
+    },
+    "1c46c1b0-49db-11f0-a594-8d6299877a84": {
+        "id": "1c46c1b0-49db-11f0-a594-8d6299877a84",
+        "tid": "24eee6e0-49da-11f0-a594-8d6299877a84",
+        "smallBlind": 5,
+        "bigBlind": 10,
+        "minBuyIn": 999,
+        "maxBuyIn": 1001,
+        "minPlayers": 2,
+        "maxPlayers": 10,
+        "gameMode": "normal",
+        "board": [],
+        "creator": "580135c0-4777-11f0-9e9c-dd76f6cf8efa",
+        "players": [
+            {
+                "playerName": "dima",
+                "id": "667d8330-4441-11f0-a7bd-dd059a82d1e0",
+                "chips": 995,
+                "folded": true,
+                "allIn": false,
+                "talked": true,
+                "cards": [
+                    "2C",
+                    "JD"
+                ]
+            },
+            {
+                "playerName": "D1w.4",
+                "id": "580135c0-4777-11f0-9e9c-dd76f6cf8efa",
+                "chips": 1005,
+                "folded": true,
+                "allIn": false,
+                "talked": false,
+                "cards": [
+                    "9S",
+                    "4C"
+                ]
+            }
+        ],
+        "actions": [
+            {
+                "action": "fold",
+                "playerName": "dima"
+            }
+        ],
+        "gameWinners": [
+            {
+                "playerName": "D1w.4",
+                "id": "580135c0-4777-11f0-9e9c-dd76f6cf8efa",
+                "chips": 1005,
+                "amount": 15
+            }
+        ],
+        "created": 1749986596159
+    },
+    "7130e2a0-49db-11f0-822c-2742f1c97550": {
+        "id": "7130e2a0-49db-11f0-822c-2742f1c97550",
+        "tid": "6825f970-49db-11f0-822c-2742f1c97550",
+        "smallBlind": 5,
+        "bigBlind": 10,
+        "minBuyIn": 999,
+        "maxBuyIn": 1001,
+        "minPlayers": 2,
+        "maxPlayers": 10,
+        "gameMode": "normal",
+        "board": [
+            "3D",
+            "TS",
+            "9S",
+            "3C"
+        ],
+        "creator": "580135c0-4777-11f0-9e9c-dd76f6cf8efa",
+        "players": [
+            {
+                "playerName": "D1w.4",
+                "id": "580135c0-4777-11f0-9e9c-dd76f6cf8efa",
+                "chips": 1010,
+                "folded": true,
+                "allIn": false,
+                "talked": false,
+                "cards": [
+                    "2H",
+                    "JC"
+                ]
+            },
+            {
+                "playerName": "dima",
+                "id": "667d8330-4441-11f0-a7bd-dd059a82d1e0",
+                "chips": 990,
+                "folded": true,
+                "allIn": false,
+                "talked": true,
+                "cards": [
+                    "7C",
+                    "6H"
+                ]
+            }
+        ],
+        "actions": [
+            {
+                "action": "call",
+                "playerName": "dima",
+                "amount": 10
+            },
+            {
+                "action": "call",
+                "playerName": "D1w.4",
+                "amount": 10
+            },
+            {
+                "action": "call",
+                "playerName": "dima",
+                "amount": 0
+            },
+            {
+                "action": "call",
+                "playerName": "D1w.4",
+                "amount": 0
+            },
+            {
+                "action": "fold",
+                "playerName": "dima"
+            }
+        ],
+        "gameWinners": [
+            {
+                "playerName": "D1w.4",
+                "id": "580135c0-4777-11f0-9e9c-dd76f6cf8efa",
+                "chips": 1010,
+                "amount": 20
+            }
+        ],
+        "created": 1749986825680
     }
 }

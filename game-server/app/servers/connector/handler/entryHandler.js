@@ -1,3 +1,5 @@
+const UserStore = require("../../../persistence/users");
+const dispatcher = require("../../../util/dispatcher");
 var logger = require('pomelo-logger').getLogger('con-log', __filename);
 
 module.exports = function(app){
@@ -40,6 +42,7 @@ handler.register = function(msg, session, next){
 handler.connect = function(msg, session, next){
     var me = this;
     var sessionService = me.app.get('sessionService');
+
     me.app.rpc.game.authRemote.auth(session, msg, function(e, user, token){
         if(!user){
             next(null, {
@@ -49,16 +52,19 @@ handler.connect = function(msg, session, next){
             return;
         }
         // duplicate log in
-        if(!! sessionService.getByUid(user.id)){
-            return next(null, {
-                code  : 500,
-                error : 'duplicate-session'
-            });
+        if(!!sessionService.getByUid(user.id)){
+            const oldSessions = sessionService.getByUid(user.id);
+            if (oldSessions && oldSessions.length > 0) {
+                oldSessions.forEach(sess => {
+                    sessionService.kick(sess.id, 'reconnect');
+                });
+            }
         }
         session.bind(user.id, function(e){
             if(e){
                 console.error('error-binding-user', e);
             }
+
             session.set('username', user.username);
             session.on('closed', onUserLeave.bind(null, me.app));
             session.pushAll(function(e){
@@ -83,6 +89,7 @@ handler.connect = function(msg, session, next){
         });
     });
 };
+
 /**
  * User log out handler
  *

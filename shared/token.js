@@ -1,8 +1,10 @@
 var crypto = require('crypto');
+var {expressjwt} = require("express-jwt");
 
+console.log(expressjwt)
 /**
  * Create token by uid. Encrypt uid and timestamp to get a token.
- * 
+ *
  * @param  {String} uid user id
  * @param  {String|Number} timestamp
  * @param  {String} pwd encrypt password
@@ -18,10 +20,10 @@ module.exports.create = function(uid, timestamp, pwd){
 
 /**
  * Parse token to validate it and get the uid and timestamp.
- * 
+ *
  * @param  {String} token token string
  * @param  {String} pwd   decrypt password
- * @return {Object}  uid and timestamp that exported from token. null for illegal token.     
+ * @return {Object}  uid and timestamp that exported from token. null for illegal token.
  */
 module.exports.parse = function(token, pwd){
 	var decipher = crypto.createDecipher('aes256', pwd);

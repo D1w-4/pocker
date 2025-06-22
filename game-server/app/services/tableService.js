@@ -94,6 +94,30 @@ TableService.prototype.createTable = function (uid, obj, cb) {
   obj.maxPlayers = Math.round(parseInt(obj.maxPlayers));
   obj.gameMode = (obj.gameMode == 'normal' || obj.gameMode == 'fast') ? obj.gameMode : 'normal';
   this.tables[tid].table = new Table(obj.smallBlind, obj.bigBlind, obj.minPlayers, obj.maxPlayers, obj.minBuyIn, obj.maxBuyIn, obj.gameMode, this.tables[tid]);
+
+  var channelService = this.app.get('channelService');
+  var adminChannel = channelService.getChannel('admin-channel', true);
+
+  const resultTable = {};
+  var table = this.tables[tid];
+  var members = table.table.members.length;
+  var players = (table.table.players.length - table.table.playersToRemove.length);
+  Object.assign(resultTable, {
+    id: table.id,
+    smallBlind: table.table.smallBlind,
+    bigBlind: table.table.bigBlind,
+    minBuyIn: table.table.minBuyIn,
+    maxBuyIn: table.table.maxBuyIn,
+    minPlayers: table.table.minPlayers,
+    maxPlayers: table.table.maxPlayers,
+    gameMode: table.table.gameMode,
+    players: players,
+    members: members
+  })
+  adminChannel.pushMessage({
+    route: 'createTable',
+    data: resultTable
+  })
   // automatically join created table
 //        session.set('tid', table.id);
 //        var tid = session.get('tid');
@@ -261,7 +285,6 @@ TableService.prototype.updatePlayerInfo = function (uid, obj, cb) {
 
 TableService.prototype.getTableIdByPin = function (pin) {
   const result = Object.values(this.tables).find((table) => {
-    console.log(table);
     return table.table.pin === pin
   })
   return result?.id;
@@ -640,6 +663,12 @@ TableService.prototype.broadcastGameState = function (tid) {
   var me = this;
   var channelService = me.app.get('channelService');
   var channel = channelService.getChannel(tid, false);
+
+  var adminChannel = channelService.getChannel('admin-channel', true);
+  adminChannel.pushMessage({
+    route: 'broadcastGameState',
+    data: this.getTableJSON(tid, void 0)
+  })
 
   function broadcast() {
     if (i == me.tables[tid].table.members.length) {
