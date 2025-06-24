@@ -114,8 +114,9 @@ TableService.prototype.createTable = function (uid, obj, cb) {
     players: players,
     members: members
   })
+
   adminChannel.pushMessage({
-    route: 'createTable',
+    route: 'updateTable',
     data: resultTable
   })
   // automatically join created table
@@ -380,6 +381,7 @@ TableService.prototype.getPlayersJSON = function (tid, type, requestUid) {
  *
  */
 TableService.prototype.addPlayer = function (tid, uid, buyIn, cb) {
+
   var me = this;
   if (!this.tables[tid]) {
     return cb('table-not-found');
@@ -421,8 +423,9 @@ TableService.prototype.addPlayer = function (tid, uid, buyIn, cb) {
       if (typeof mIndex === 'number') {
         table.members[mIndex].chips = chips;
       }
-      table.AddPlayer(updatedUser.username, buyIn, uid);
+      table.AddPlayer(updatedUser.username, buyIn, uid);!
       me.pushPlayerInfo(tid, user.id, updatedUser);
+      me.broadcastGameState(tid);
       me.app.get('channelService').getChannel(tid, true).pushMessage({
         route: 'onUpdateUsers',
         members: table.members
@@ -666,7 +669,7 @@ TableService.prototype.broadcastGameState = function (tid) {
 
   var adminChannel = channelService.getChannel('admin-channel', true);
   adminChannel.pushMessage({
-    route: 'broadcastGameState',
+    route: `broadcastGameState.${tid}`,
     data: this.getTableJSON(tid, void 0)
   })
 

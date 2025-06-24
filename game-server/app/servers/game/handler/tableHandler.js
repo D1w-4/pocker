@@ -114,7 +114,10 @@ handler.joinAdminView = function (msg, session, next) {
     var channelService = this.app.get('channelService');
     var channel = channelService.getChannel('admin-channel', true);
     var sid = getSidByUid(session.uid, this.app);
-    channel.add(session.uid, sid);
+
+    if (!channel.getMember(session.uid)) {
+      channel.add(session.uid, sid);
+    }
     next(null, {
       code: 200,
       route: msg.route
