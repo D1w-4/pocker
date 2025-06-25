@@ -52,6 +52,12 @@ BotService.prototype.checkAvailability = function(){
     setInterval(function(){
         var bot = me.getAvailableBot();
         var table = me.getAvailableTable();
+        console.log(
+          bot.username,
+          table.table.pin,
+          me.getActiveBots(),
+          me.getActiveNames()
+        )
         if(bot && table && (!me.config.minBots || me.config.minBots > me.getActiveBots()) && !me.config.banBots){
             me.joinGame(bot, table);
         }
@@ -81,6 +87,16 @@ BotService.prototype.getActiveBots = function(){
     }
     return ctr;
 };
+BotService.prototype.getActiveNames = function(){
+    const result = []
+    for(var i in this.bots){
+        if(!this.bots[i].available){
+            result.push(this.bots[i].username);
+        }
+    }
+    return result;
+};
+
 
 BotService.prototype.getAvailableTable = function(){
     var table;
@@ -327,19 +343,25 @@ BotService.prototype.removeBot = function(botAry, i, tid, banBots, cb){
     if(me.bots[bid].tid === tid){
         me.bots[bid].games -= 1;
         var user = me.tableService.getPlayerJSON(tid, bid, 'players') || me.tableService.getPlayerJSON(tid, bid, 'playersToAdd') || me.tableService.getPlayerJSON(tid, bid, 'previousPlayers');
-        console.log(me.tableService.getTable(tid));
-        console.log(tid, bid, user);
-        if(me.bots[bid].games === 0 || (user && user.chips === 0) || banBots === true){
-            logger.debug('bot '+me.bots[bid].username+' ('+me.bots[bid].id+') left game '+tid+' with '+((user && user.chips) ? user.chips : 0)+' chips', user);
-            me.leaveGame(tid, bid, function(){
-                me.bots[bid].available = true;
-                delete me.bots[bid].tid;
-                me.tableInstance[tid] -= 1;
-                me.removeBot(botAry, (i+1), tid, banBots, cb);
-            });
-        }else{
+        logger.debug('bot '+me.bots[bid].username+' ('+me.bots[bid].id+') left game '+tid+' with '+((user && user.chips) ? user.chips : 0)+' chips', user);
+        // Убийство всех ботов так как есть конфликт с чипами когда боты остаются а по логике игры выгоняются
+        me.leaveGame(tid, bid, function(){
+            me.bots[bid].available = true;
+            delete me.bots[bid].tid;
+            me.tableInstance[tid] -= 1;
             me.removeBot(botAry, (i+1), tid, banBots, cb);
-        }
+        });
+        // if(me.bots[bid].games === 0 || (user && user.chips === 0) || banBots === true){
+        //     logger.debug('bot '+me.bots[bid].username+' ('+me.bots[bid].id+') left game '+tid+' with '+((user && user.chips) ? user.chips : 0)+' chips', user);
+        //     me.leaveGame(tid, bid, function(){
+        //         me.bots[bid].available = true;
+        //         delete me.bots[bid].tid;
+        //         me.tableInstance[tid] -= 1;
+        //         me.removeBot(botAry, (i+1), tid, banBots, cb);
+        //     });
+        // }else{
+        //     me.removeBot(botAry, (i+1), tid, banBots, cb);
+        // }
     }
 };
 

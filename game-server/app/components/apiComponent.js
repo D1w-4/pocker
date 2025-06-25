@@ -48,7 +48,6 @@ const start = (port) => (app) => {
         })
         return;
       }
-      console.log('reg', user);
       res.json({
         token: jsonwebtoken.sign({uid: user.id}, SESSION_CONFIG.secret, {
           algorithm: "HS256",

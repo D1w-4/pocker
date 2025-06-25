@@ -17,9 +17,9 @@
         "username": "bot2",
         "password": "bot2",
         "email": "bot2@poker-stack.com",
-        "chips": 95928,
-        "wins": 0,
-        "largestWin": 0,
+        "chips": 94677,
+        "wins": 1,
+        "largestWin": 1020,
         "friends": [],
         "created": 1501659466171
     },
@@ -29,8 +29,8 @@
         "username": "bot3",
         "password": "bot3",
         "email": "bot3@poker-stack.com",
-        "chips": 94000,
-        "wins": 2,
+        "chips": 93020,
+        "wins": 3,
         "largestWin": 2768,
         "friends": [],
         "created": 1501659466174
@@ -41,7 +41,7 @@
         "username": "bot4",
         "password": "bot4",
         "email": "bot4@poker-stack.com",
-        "chips": 92494,
+        "chips": 91494,
         "wins": 2,
         "largestWin": 2066,
         "friends": [],
@@ -53,8 +53,8 @@
         "username": "bot5",
         "password": "bot5",
         "email": "bot5@poker-stack.com",
-        "chips": 92000,
-        "wins": 3,
+        "chips": 91000,
+        "wins": 4,
         "largestWin": 3010,
         "friends": [],
         "created": 1501659466177
@@ -65,9 +65,9 @@
         "username": "bot6",
         "password": "bot6",
         "email": "bot6@poker-stack.com",
-        "chips": 90380,
-        "wins": 3,
-        "largestWin": 702,
+        "chips": 88380,
+        "wins": 4,
+        "largestWin": 2271,
         "friends": [],
         "created": 1501659466177
     },
@@ -77,7 +77,7 @@
         "username": "bot7",
         "password": "bot7",
         "email": "bot7@poker-stack.com",
-        "chips": 94386,
+        "chips": 93376,
         "wins": 2,
         "largestWin": 884,
         "friends": [],
@@ -89,7 +89,7 @@
         "username": "bot8",
         "password": "bot8",
         "email": "bot8@poker-stack.com",
-        "chips": 94886,
+        "chips": 92886,
         "wins": 5,
         "largestWin": 5020,
         "friends": [],
@@ -125,5 +125,113 @@
         "friends": [],
         "created": 1750586284414,
         "chips": 2000
+    },
+    "35d9fae0-50eb-11f0-bbb5-3ddcc4f31f51": {
+        "id": "35d9fae0-50eb-11f0-bbb5-3ddcc4f31f51",
+        "username": "bot9",
+        "wins": 0,
+        "largestWin": 0,
+        "friends": [],
+        "created": 1750763159950,
+        "chips": 100000
+    },
+    "35da21f0-50eb-11f0-bbb5-3ddcc4f31f51": {
+        "id": "35da21f0-50eb-11f0-bbb5-3ddcc4f31f51",
+        "username": "bot10",
+        "wins": 0,
+        "largestWin": 0,
+        "friends": [],
+        "created": 1750763159951,
+        "chips": 100000
+    },
+    "35da4900-50eb-11f0-bbb5-3ddcc4f31f51": {
+        "id": "35da4900-50eb-11f0-bbb5-3ddcc4f31f51",
+        "username": "bot11",
+        "wins": 0,
+        "largestWin": 0,
+        "friends": [],
+        "created": 1750763159952,
+        "chips": 100000
+    },
+    "35da4901-50eb-11f0-bbb5-3ddcc4f31f51": {
+        "id": "35da4901-50eb-11f0-bbb5-3ddcc4f31f51",
+        "username": "bot12",
+        "wins": 0,
+        "largestWin": 0,
+        "friends": [],
+        "created": 1750763159952,
+        "chips": 100000
+    },
+    "35da9720-50eb-11f0-bbb5-3ddcc4f31f51": {
+        "id": "35da9720-50eb-11f0-bbb5-3ddcc4f31f51",
+        "username": "bot13",
+        "wins": 0,
+        "largestWin": 0,
+        "friends": [],
+        "created": 1750763159954,
+        "chips": 100000
+    },
+    "35dabe30-50eb-11f0-bbb5-3ddcc4f31f51": {
+        "id": "35dabe30-50eb-11f0-bbb5-3ddcc4f31f51",
+        "username": "bot14",
+        "wins": 0,
+        "largestWin": 0,
+        "friends": [],
+        "created": 1750763159955,
+        "chips": 100000
+    },
+    "35dae540-50eb-11f0-bbb5-3ddcc4f31f51": {
+        "id": "35dae540-50eb-11f0-bbb5-3ddcc4f31f51",
+        "username": "bot15",
+        "wins": 0,
+        "largestWin": 0,
+        "friends": [],
+        "created": 1750763159956,
+        "chips": 100000
+    },
+    "35db0c50-50eb-11f0-bbb5-3ddcc4f31f51": {
+        "id": "35db0c50-50eb-11f0-bbb5-3ddcc4f31f51",
+        "username": "bot16",
+        "wins": 0,
+        "largestWin": 0,
+        "friends": [],
+        "created": 1750763159957,
+        "chips": 100000
+    },
+    "35db0c51-50eb-11f0-bbb5-3ddcc4f31f51": {
+        "id": "35db0c51-50eb-11f0-bbb5-3ddcc4f31f51",
+        "username": "bot17",
+        "wins": 0,
+        "largestWin": 0,
+        "friends": [],
+        "created": 1750763159957,
+        "chips": 100000
+    },
+    "35db3360-50eb-11f0-bbb5-3ddcc4f31f51": {
+        "id": "35db3360-50eb-11f0-bbb5-3ddcc4f31f51",
+        "username": "bot18",
+        "wins": 0,
+        "largestWin": 0,
+        "friends": [],
+        "created": 1750763159958,
+        "chips": 100000
+    },
+    "35db3361-50eb-11f0-bbb5-3ddcc4f31f51": {
+        "id": "35db3361-50eb-11f0-bbb5-3ddcc4f31f51",
+        "username": "bot19",
+        "wins": 18,
+        "largestWin": 2000,
+        "friends": [],
+        "created": 1750763159958,
+        "chips": 66936
+    },
+    "35db5a70-50eb-11f0-bbb5-3ddcc4f31f51": {
+        "id": "35db5a70-50eb-11f0-bbb5-3ddcc4f31f51",
+        "username": "bot20",
+        "wins": 15,
+        "largestWin": 2000,
+        "friends": [],
+        "created": 1750763159959,
+        "chips": 63054
     }
 }

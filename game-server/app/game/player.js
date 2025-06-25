@@ -202,7 +202,6 @@ function progress(table){
             }
             table.currentPlayer = getNextAvailablePlayer(table, table.startIndex, table.players.length);
             if(typeof table.currentPlayer !== 'number' && table.game.roundName !== 'GameEnd'){
-                console.log('ALL IN GAME');
                 completeBoard(table);
                 return progress(table);
             }
@@ -219,7 +218,6 @@ function completeGame(table){
         cards = table.players[j].cards.concat(table.game.board);
         table.players[j].hand = new Hand(cards);
     }
-    console.log('checkForWinner', table);
     checkForWinner(table);
     table.eventEmitter.emit('gameOver');
 }
@@ -337,7 +335,6 @@ function checkForWinner(table){
     }
     part = 0;
     prize = 0;
-    console.log('roundBets', table.game.roundBets);
     allInPlayer = checkForAllInPlayer(table, winners);
     if(allInPlayer.length > 0){
         minBets = table.game.roundBets[winners[0]];
@@ -350,7 +347,6 @@ function checkForWinner(table){
     }else{
         part = parseInt(table.game.roundBets[winners[0]], 10);
     }
-    console.log('part', part);
     for(l = 0; l < table.game.roundBets.length; l += 1){
         // handle user leave
 //        console.log('more than 1 player', table.players.length > 1 && (table.players.length - table.playersToRemove.length > 1));
@@ -362,8 +358,6 @@ function checkForWinner(table){
             table.game.roundBets[l] = 0;
         }
     }
-    console.log('prize', prize);
-    console.log('winners', winners);
 
     if(prize > 0){
         var remainder = prize % winners.length;

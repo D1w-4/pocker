@@ -66,6 +66,7 @@ TableService.prototype.getTables = function () {
 };
 
 TableService.prototype.createTable = function (uid, obj, cb) {
+  console.log('createTable')
   if (!obj || (obj && (
     isNaN(obj.smallBlind) ||
     isNaN(obj.bigBlind) ||

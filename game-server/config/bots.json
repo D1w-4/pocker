@@ -2,20 +2,20 @@
     "config" : {
         "enabled" : true,
         "joinInterval" : {
-            "min" : 3,
-            "max" : 3
+            "min" : 1,
+            "max" : 1
         },
         "actionInterval" : {
             "min" : 1,
-            "max" : 3
+            "max" : 1
         },
         "gamesToPlay" : {
             "min" : 1,
             "max" : 10
         },
         "buyIn" : 1000,
-        "minBots" : 7,
-        "minPlayers" : 3,
+        "minBots" : 2,
+        "minPlayers" : 2,
         "validateChips" : false
     },
     "bots" : [
@@ -58,6 +58,66 @@
             "username": "bot8",
             "password": "bot8",
             "email": "bot8@poker-stack.com"
+        },
+        {
+            "username": "bot9",
+            "password": "bot9",
+            "email": "bot9@poker-stack.com"
+        },
+        {
+            "username": "bot10",
+            "password": "bot10",
+            "email": "bot10@poker-stack.com"
+        },
+        {
+            "username": "bot11",
+            "password": "bot11",
+            "email": "bot11@poker-stack.com"
+        },
+        {
+            "username": "bot12",
+            "password": "bot12",
+            "email": "bot12@poker-stack.com"
+        },
+        {
+            "username": "bot13",
+            "password": "bot13",
+            "email": "bot13@poker-stack.com"
+        },
+        {
+            "username": "bot14",
+            "password": "bot14",
+            "email": "bot14@poker-stack.com"
+        },
+        {
+            "username": "bot15",
+            "password": "bot15",
+            "email": "bot15@poker-stack.com"
+        },
+        {
+            "username": "bot16",
+            "password": "bot16",
+            "email": "bot16@poker-stack.com"
+        },
+        {
+            "username": "bot17",
+            "password": "bot17",
+            "email": "bot17@poker-stack.com"
+        },
+        {
+            "username": "bot18",
+            "password": "bot18",
+            "email": "bot18@poker-stack.com"
+        },
+        {
+            "username": "bot19",
+            "password": "bot19",
+            "email": "bot19@poker-stack.com"
+        },
+        {
+            "username": "bot20",
+            "password": "bot20",
+            "email": "bot20@poker-stack.com"
         }
     ]
 }
