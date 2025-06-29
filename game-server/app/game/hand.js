@@ -23,7 +23,6 @@ function rankHandInt(hand){
     ranks = handRanks.sort().toString().replace(/\W/g, "");
     suits = handSuits.sort().toString().replace(/\W/g, "");
     cards = hand.cards.toString();
-
     //Four of a kind
     if(rank === 0){
         if(ranks.indexOf('AAAA') > -1){rank = 292 + rankKickers(ranks.replace('AAAA', ''), 1); }
@@ -430,7 +429,7 @@ function rankKickers(ranks, noOfCards){
         return b - a;
     });
     for(i=0;i< noOfCards;i+=1){
-        kickerRank += myRanks[i];
+        kickerRank += myRanks[i] || 0;
     }
     return kickerRank;
 }

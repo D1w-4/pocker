@@ -202,20 +202,20 @@
     "35db0c51-50eb-11f0-bbb5-3ddcc4f31f51": {
         "id": "35db0c51-50eb-11f0-bbb5-3ddcc4f31f51",
         "username": "bot17",
-        "wins": 5,
+        "wins": 7,
         "largestWin": 2010,
         "friends": [],
         "created": 1750763159957,
-        "chips": 95348
+        "chips": 95295
     },
     "35db3360-50eb-11f0-bbb5-3ddcc4f31f51": {
         "id": "35db3360-50eb-11f0-bbb5-3ddcc4f31f51",
         "username": "bot18",
-        "wins": 4,
+        "wins": 7,
         "largestWin": 2010,
         "friends": [],
         "created": 1750763159958,
-        "chips": 97903
+        "chips": 97981
     },
     "35db3361-50eb-11f0-bbb5-3ddcc4f31f51": {
         "id": "35db3361-50eb-11f0-bbb5-3ddcc4f31f51",
@@ -224,7 +224,7 @@
         "largestWin": 2010,
         "friends": [],
         "created": 1750763159958,
-        "chips": 47425
+        "chips": 46425
     },
     "35db5a70-50eb-11f0-bbb5-3ddcc4f31f51": {
         "id": "35db5a70-50eb-11f0-bbb5-3ddcc4f31f51",
@@ -233,7 +233,7 @@
         "largestWin": 2010,
         "friends": [],
         "created": 1750763159959,
-        "chips": 49740
+        "chips": 48740
     },
     "6cebb3e0-51a7-11f0-8b09-9131abd9ecf3": {
         "id": "6cebb3e0-51a7-11f0-8b09-9131abd9ecf3",

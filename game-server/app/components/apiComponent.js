@@ -3,6 +3,7 @@ const express = require('express');
 const server = express();
 const jsonwebtoken = require("jsonwebtoken");
 var {expressjwt} = require("express-jwt");
+var Hand = require('./../game/hand');
 
 var SESSION_CONFIG = require('../../../shared/config/session.json');
 
@@ -145,10 +146,12 @@ const start = (port) => (app) => {
 
   })
 
-  server.get('/rank', function (req, res) {
+  server.post('/rank', function (req, res) {
     const cards = req.body.cards;
-    const tableService = app.get('tableService')
-    const tid = tableService.getTableIdByPin(pin);
+    const hand = new Hand(cards);
+    res.json({
+      rank: hand.rank,
+    });
   })
   server.listen(port, () => {
     console.log(`api running on port ${port}`);
