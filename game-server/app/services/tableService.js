@@ -51,6 +51,7 @@ TableService.prototype.getTables = function () {
     tables.totalPlayers += players;
     tables.tables.push({
       id: table.id,
+      pin: table.table.pin,
       smallBlind: table.table.smallBlind,
       bigBlind: table.table.bigBlind,
       minBuyIn: table.table.minBuyIn,
@@ -105,6 +106,7 @@ TableService.prototype.createTable = function (uid, obj, cb) {
   var players = (table.table.players.length - table.table.playersToRemove.length);
   Object.assign(resultTable, {
     id: table.id,
+    pin: table.table.pin,
     smallBlind: table.table.smallBlind,
     bigBlind: table.table.bigBlind,
     minBuyIn: table.table.minBuyIn,

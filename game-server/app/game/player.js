@@ -33,7 +33,7 @@ Player.prototype.Check = function(){
             }
         }
         // attempt to progress the game
-        this.turnBet = {action: "check", playerName: this.playerName};
+        this.turnBet = {action: "check", playerName: this.playerName, id: this.id};
         this.table.actions.push(this.turnBet);
         progress(this.table);
     }else{
@@ -55,7 +55,7 @@ Player.prototype.Fold = function(){
     }
     //Mark the player as folded
     this.folded = true;
-    this.turnBet = {action: "fold", playerName: this.playerName};
+    this.turnBet = {action: "fold", playerName: this.playerName, id: this.id};
     this.table.actions.push(this.turnBet);
     // attempt to progress the game
     progress(this.table);
@@ -71,7 +71,7 @@ Player.prototype.Bet = function(bet){
         this.table.game.bets[i] = totalBet; // this.table.game.bets[i] += totalBet;
         this.talked = true;
         // attempt to progress the game
-        this.turnBet = {action: "bet", playerName: this.playerName, amount: totalBet};
+        this.turnBet = {action: "bet", playerName: this.playerName, amount: totalBet, id: this.id};
         this.table.actions.push(this.turnBet);
         progress(this.table);
     }else{
@@ -108,7 +108,7 @@ Player.prototype.Call = function(){
             }
         }
         // attempt to progress the game
-        this.turnBet = {action: "call", playerName: this.playerName, amount: maxBet};
+        this.turnBet = {action: "call", playerName: this.playerName, amount: maxBet, id: this.id};
         this.table.actions.push(this.turnBet);
         progress(this.table);
     }else{
@@ -133,7 +133,7 @@ Player.prototype.AllIn = function(){
     }
 
     // attempt to progress the game
-    this.turnBet = {action: "allin", playerName: this.playerName, amount: allInValue};
+    this.turnBet = {action: "allin", playerName: this.playerName, amount: allInValue, id: this.id};
     this.table.actions.push(this.turnBet);
 
     progress(this.table);

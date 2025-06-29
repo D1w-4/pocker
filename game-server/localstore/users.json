@@ -53,8 +53,8 @@
         "username": "bot5",
         "password": "bot5",
         "email": "bot5@poker-stack.com",
-        "chips": 91000,
-        "wins": 4,
+        "chips": 90492,
+        "wins": 5,
         "largestWin": 3010,
         "friends": [],
         "created": 1501659466177
@@ -65,8 +65,8 @@
         "username": "bot6",
         "password": "bot6",
         "email": "bot6@poker-stack.com",
-        "chips": 88380,
-        "wins": 4,
+        "chips": 88888,
+        "wins": 5,
         "largestWin": 2271,
         "friends": [],
         "created": 1501659466177
@@ -77,9 +77,9 @@
         "username": "bot7",
         "password": "bot7",
         "email": "bot7@poker-stack.com",
-        "chips": 93376,
-        "wins": 2,
-        "largestWin": 884,
+        "chips": 92376,
+        "wins": 3,
+        "largestWin": 1000,
         "friends": [],
         "created": 1501659466178
     },
@@ -89,8 +89,8 @@
         "username": "bot8",
         "password": "bot8",
         "email": "bot8@poker-stack.com",
-        "chips": 92886,
-        "wins": 5,
+        "chips": 91087,
+        "wins": 6,
         "largestWin": 5020,
         "friends": [],
         "created": 1501659466178
@@ -110,11 +110,11 @@
     "3230aea0-4f4e-11f0-b48e-eb57f77f6ff2": {
         "id": "3230aea0-4f4e-11f0-b48e-eb57f77f6ff2",
         "username": "D1w.4",
-        "wins": 9,
-        "largestWin": 2968,
+        "wins": 10,
+        "largestWin": 2970,
         "friends": [],
         "created": 1750585771658,
-        "chips": 1000
+        "chips": 87000
     },
     "63d109e0-4f4f-11f0-b48e-eb57f77f6ff2": {
         "id": "63d109e0-4f4f-11f0-b48e-eb57f77f6ff2",
@@ -122,6 +122,7 @@
         "password": "12345",
         "wins": 8,
         "largestWin": 2355,
+        "admin": true,
         "friends": [],
         "created": 1750586284414,
         "chips": 2000
@@ -129,109 +130,118 @@
     "35d9fae0-50eb-11f0-bbb5-3ddcc4f31f51": {
         "id": "35d9fae0-50eb-11f0-bbb5-3ddcc4f31f51",
         "username": "bot9",
-        "wins": 0,
-        "largestWin": 0,
+        "wins": 2,
+        "largestWin": 2000,
         "friends": [],
         "created": 1750763159950,
-        "chips": 100000
+        "chips": 102000
     },
     "35da21f0-50eb-11f0-bbb5-3ddcc4f31f51": {
         "id": "35da21f0-50eb-11f0-bbb5-3ddcc4f31f51",
         "username": "bot10",
-        "wins": 0,
-        "largestWin": 0,
+        "wins": 2,
+        "largestWin": 2000,
         "friends": [],
         "created": 1750763159951,
-        "chips": 100000
+        "chips": 99799
     },
     "35da4900-50eb-11f0-bbb5-3ddcc4f31f51": {
         "id": "35da4900-50eb-11f0-bbb5-3ddcc4f31f51",
         "username": "bot11",
-        "wins": 0,
-        "largestWin": 0,
+        "wins": 2,
+        "largestWin": 830,
         "friends": [],
         "created": 1750763159952,
-        "chips": 100000
+        "chips": 98415
     },
     "35da4901-50eb-11f0-bbb5-3ddcc4f31f51": {
         "id": "35da4901-50eb-11f0-bbb5-3ddcc4f31f51",
         "username": "bot12",
-        "wins": 0,
-        "largestWin": 0,
+        "wins": 1,
+        "largestWin": 613,
         "friends": [],
         "created": 1750763159952,
-        "chips": 100000
+        "chips": 100283
     },
     "35da9720-50eb-11f0-bbb5-3ddcc4f31f51": {
         "id": "35da9720-50eb-11f0-bbb5-3ddcc4f31f51",
         "username": "bot13",
-        "wins": 0,
-        "largestWin": 0,
+        "wins": 2,
+        "largestWin": 2000,
         "friends": [],
         "created": 1750763159954,
-        "chips": 100000
+        "chips": 99177
     },
     "35dabe30-50eb-11f0-bbb5-3ddcc4f31f51": {
         "id": "35dabe30-50eb-11f0-bbb5-3ddcc4f31f51",
         "username": "bot14",
-        "wins": 0,
-        "largestWin": 0,
+        "wins": 1,
+        "largestWin": 2000,
         "friends": [],
         "created": 1750763159955,
-        "chips": 100000
+        "chips": 100585
     },
     "35dae540-50eb-11f0-bbb5-3ddcc4f31f51": {
         "id": "35dae540-50eb-11f0-bbb5-3ddcc4f31f51",
         "username": "bot15",
-        "wins": 0,
-        "largestWin": 0,
+        "wins": 1,
+        "largestWin": 2000,
         "friends": [],
         "created": 1750763159956,
-        "chips": 100000
+        "chips": 98598
     },
     "35db0c50-50eb-11f0-bbb5-3ddcc4f31f51": {
         "id": "35db0c50-50eb-11f0-bbb5-3ddcc4f31f51",
         "username": "bot16",
-        "wins": 0,
-        "largestWin": 0,
+        "wins": 2,
+        "largestWin": 2000,
         "friends": [],
         "created": 1750763159957,
-        "chips": 100000
+        "chips": 99942
     },
     "35db0c51-50eb-11f0-bbb5-3ddcc4f31f51": {
         "id": "35db0c51-50eb-11f0-bbb5-3ddcc4f31f51",
         "username": "bot17",
-        "wins": 0,
-        "largestWin": 0,
+        "wins": 5,
+        "largestWin": 2010,
         "friends": [],
         "created": 1750763159957,
-        "chips": 100000
+        "chips": 95348
     },
     "35db3360-50eb-11f0-bbb5-3ddcc4f31f51": {
         "id": "35db3360-50eb-11f0-bbb5-3ddcc4f31f51",
         "username": "bot18",
-        "wins": 0,
-        "largestWin": 0,
+        "wins": 4,
+        "largestWin": 2010,
         "friends": [],
         "created": 1750763159958,
-        "chips": 100000
+        "chips": 97903
     },
     "35db3361-50eb-11f0-bbb5-3ddcc4f31f51": {
         "id": "35db3361-50eb-11f0-bbb5-3ddcc4f31f51",
         "username": "bot19",
-        "wins": 18,
-        "largestWin": 2000,
+        "wins": 62,
+        "largestWin": 2010,
         "friends": [],
         "created": 1750763159958,
-        "chips": 66936
+        "chips": 47425
     },
     "35db5a70-50eb-11f0-bbb5-3ddcc4f31f51": {
         "id": "35db5a70-50eb-11f0-bbb5-3ddcc4f31f51",
         "username": "bot20",
-        "wins": 15,
-        "largestWin": 2000,
+        "wins": 58,
+        "largestWin": 2010,
         "friends": [],
         "created": 1750763159959,
-        "chips": 63054
+        "chips": 49740
+    },
+    "6cebb3e0-51a7-11f0-8b09-9131abd9ecf3": {
+        "id": "6cebb3e0-51a7-11f0-8b09-9131abd9ecf3",
+        "username": "D1w.kek",
+        "wins": 0,
+        "largestWin": 0,
+        "friends": [],
+        "created": 1750843997726,
+        "chips": 100000
     }
 }

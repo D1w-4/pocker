@@ -5,6 +5,9 @@
         },
         "fast" : {
             "timeout" : 15
+        },
+        "easy": {
+            "timeout": 100000
         }
     }
 }

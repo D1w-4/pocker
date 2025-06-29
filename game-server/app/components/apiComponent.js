@@ -84,7 +84,8 @@ const start = (port) => (app) => {
       minBuyIn,
       maxBuyIn,
       minPlayers: 2,
-      maxPlayers: 10
+      maxPlayers: 10,
+      gameMode: 'easy'
     }, function (err, board) {
       if (err) {
         return res.status(400).send(JSON.stringify({error: err, code: 400}))
@@ -144,6 +145,11 @@ const start = (port) => (app) => {
 
   })
 
+  server.get('/rank', function (req, res) {
+    const cards = req.body.cards;
+    const tableService = app.get('tableService')
+    const tid = tableService.getTableIdByPin(pin);
+  })
   server.listen(port, () => {
     console.log(`api running on port ${port}`);
   })

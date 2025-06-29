@@ -22,7 +22,7 @@ remote.register = function (userObj, cb) {
     username: userObj.username,
     password: userObj.password,
     email: userObj.email,
-    chips: 100000
+    chips: 100_000
   }, function (e, user) {
     if (e) {
       cb(e);
