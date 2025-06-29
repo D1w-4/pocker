@@ -68,7 +68,6 @@ TableService.prototype.getTables = function () {
 };
 
 TableService.prototype.createTable = function (uid, obj, cb) {
-  console.log('createTable')
   if (!obj || (obj && (
     isNaN(obj.smallBlind) ||
     isNaN(obj.bigBlind) ||
@@ -154,6 +153,13 @@ TableService.prototype.createTable = function (uid, obj, cb) {
   cb(null, this.tables[tid]);
 };
 
+TableService.prototype.getByCreatorUid = function (uuid) {
+  const tableList = Object.values(this.tables)
+  const result = tableList.filter((table) => {
+    return table.creator === uuid;
+  })
+  return result;
+}
 /**
  * Add member to the table
  *
@@ -428,8 +434,9 @@ TableService.prototype.addPlayer = function (tid, uid, buyIn, cb) {
       if (typeof mIndex === 'number') {
         table.members[mIndex].chips = chips;
       }
-      table.AddPlayer(updatedUser.username, buyIn, uid);!
-      me.pushPlayerInfo(tid, user.id, updatedUser);
+      table.AddPlayer(updatedUser.username, buyIn, uid);
+      !
+        me.pushPlayerInfo(tid, user.id, updatedUser);
       me.broadcastGameState(tid);
       me.app.get('channelService').getChannel(tid, true).pushMessage({
         route: 'onUpdateUsers',

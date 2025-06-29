@@ -79,6 +79,12 @@ const start = (port) => (app) => {
 
   server.post('/create-table', function (req, res) {
     const tableService = app.get('tableService')
+    const tables = tableService.getByCreatorUid(req.auth.uid);
+    const tablePins = tables.map(table => table.table.pin)
+    if (tables && tables.length > 0) {
+      return res.status(400).json({error: 'A table has been created', code: 400, pin: tablePins[0]})
+    }
+
     tableService.createTable(req.auth.uid, {
       smallBlind: 5,
       bigBlind: 10,

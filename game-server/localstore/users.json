@@ -114,7 +114,7 @@
         "largestWin": 2970,
         "friends": [],
         "created": 1750585771658,
-        "chips": 86000
+        "chips": 85000
     },
     "63d109e0-4f4f-11f0-b48e-eb57f77f6ff2": {
         "id": "63d109e0-4f4f-11f0-b48e-eb57f77f6ff2",
@@ -188,7 +188,7 @@
         "largestWin": 2000,
         "friends": [],
         "created": 1750763159956,
-        "chips": 98598
+        "chips": 97598
     },
     "35db0c50-50eb-11f0-bbb5-3ddcc4f31f51": {
         "id": "35db0c50-50eb-11f0-bbb5-3ddcc4f31f51",
@@ -197,7 +197,7 @@
         "largestWin": 2000,
         "friends": [],
         "created": 1750763159957,
-        "chips": 98942
+        "chips": 97942
     },
     "35db0c51-50eb-11f0-bbb5-3ddcc4f31f51": {
         "id": "35db0c51-50eb-11f0-bbb5-3ddcc4f31f51",
@@ -206,7 +206,7 @@
         "largestWin": 2010,
         "friends": [],
         "created": 1750763159957,
-        "chips": 93007
+        "chips": 92007
     },
     "35db3360-50eb-11f0-bbb5-3ddcc4f31f51": {
         "id": "35db3360-50eb-11f0-bbb5-3ddcc4f31f51",
@@ -215,7 +215,7 @@
         "largestWin": 2010,
         "friends": [],
         "created": 1750763159958,
-        "chips": 94324
+        "chips": 93324
     },
     "35db3361-50eb-11f0-bbb5-3ddcc4f31f51": {
         "id": "35db3361-50eb-11f0-bbb5-3ddcc4f31f51",
@@ -224,7 +224,7 @@
         "largestWin": 2010,
         "friends": [],
         "created": 1750763159958,
-        "chips": 39425
+        "chips": 32425
     },
     "35db5a70-50eb-11f0-bbb5-3ddcc4f31f51": {
         "id": "35db5a70-50eb-11f0-bbb5-3ddcc4f31f51",
@@ -233,7 +233,7 @@
         "largestWin": 2010,
         "friends": [],
         "created": 1750763159959,
-        "chips": 40740
+        "chips": 33740
     },
     "6cebb3e0-51a7-11f0-8b09-9131abd9ecf3": {
         "id": "6cebb3e0-51a7-11f0-8b09-9131abd9ecf3",
@@ -244,4 +244,4 @@
         "created": 1750843997726,
         "chips": 100000
     }
-}}
+}
