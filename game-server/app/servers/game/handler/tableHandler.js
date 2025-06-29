@@ -1,5 +1,6 @@
 const UserStore = require("../../../persistence/users");
 const dispatcher = require("../../../util/dispatcher");
+const TableStore = require("../../../persistence/tables");
 var logger = require('pomelo-logger').getLogger('game-log', __filename);
 
 module.exports = function (app) {
@@ -93,21 +94,60 @@ handler.getTable = function (msg, session, next) {
   });
 }
 handler.startAdminGame = function (msg, session, next) {
-  this.app.get('tableService').startGame(msg.tid, function (e) {
-    if (e) {
+  UserStore.getByAttr('id', session.uid, {
+    getFullEntity: true
+  }, (err, member) => {
+    if (!member.admin) {
       next(null, {
         code: 500,
-        error: e
+        error: 'is not admin'
       });
+      return;
     }
-    next(null, {
-      code: 200,
-      route: msg.route
+    this.app.get('tableService').startGame(msg.tid, function (e) {
+      if (e) {
+        next(null, {
+          code: 500,
+          error: e
+        });
+      }
+      next(null, {
+        code: 200,
+        route: msg.route
+      });
     });
   });
 };
-handler.joinAdminView = function (msg, session, next) {
 
+handler.tableAdminStats = function (msg, session, next) {
+  UserStore.getByAttr('id', session.uid, {
+    getFullEntity: true
+  }, (err, member) => {
+    if (!member.admin) {
+      next(null, {
+        code: 500,
+        error: 'is not admin'
+      });
+      return;
+    }
+
+    TableStore.getByAttr('tid', msg.tid, (err, result) => {
+      if (err) {
+        next(null, {
+          code: 400,
+          error: err
+        });
+      } else {
+        next(null, {
+          code: 200,
+          result: Array.isArray(result) ? result : [result]
+        });
+      }
+    })
+  });
+};
+
+handler.joinAdminView = function (msg, session, next) {
   if (!session.uid) {
     next(null, {
       code: 401,

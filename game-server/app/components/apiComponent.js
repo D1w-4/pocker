@@ -151,7 +151,7 @@ const start = (port) => (app) => {
       if (err) {
         return res.status(400).json({error: err, code: 400})
       } else {
-        res.json(result);
+        res.json(Array.isArray(result) ? result : [result]);
       }
     })
   })
