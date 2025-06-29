@@ -26594,5 +26594,1100 @@
             }
         ],
         "created": 1751182964263
+    },
+    "a7e2f860-54bc-11f0-bc1a-8dc38c7beeb7": {
+        "id": "a7e2f860-54bc-11f0-bc1a-8dc38c7beeb7",
+        "tid": "784cf6a0-54bc-11f0-bc1a-8dc38c7beeb7",
+        "smallBlind": 5,
+        "bigBlind": 10,
+        "minBuyIn": 20,
+        "maxBuyIn": 1000,
+        "minPlayers": 2,
+        "maxPlayers": 10,
+        "gameMode": "normal",
+        "board": [
+            "JS",
+            "3S",
+            "5C",
+            "3H",
+            "AS"
+        ],
+        "creator": "3230aea0-4f4e-11f0-b48e-eb57f77f6ff2",
+        "players": [
+            {
+                "playerName": "D1w.4",
+                "id": "3230aea0-4f4e-11f0-b48e-eb57f77f6ff2",
+                "chips": 980,
+                "folded": true,
+                "allIn": false,
+                "talked": true,
+                "cards": [
+                    "QH",
+                    "TC"
+                ]
+            },
+            {
+                "playerName": "bot18",
+                "id": "35db3360-50eb-11f0-bbb5-3ddcc4f31f51",
+                "chips": 0,
+                "folded": false,
+                "allIn": true,
+                "talked": true,
+                "cards": [
+                    "8S",
+                    "KH"
+                ]
+            },
+            {
+                "playerName": "bot17",
+                "id": "35db0c51-50eb-11f0-bbb5-3ddcc4f31f51",
+                "chips": 2010,
+                "folded": true,
+                "allIn": true,
+                "talked": true,
+                "cards": [
+                    "2D",
+                    "4C"
+                ]
+            }
+        ],
+        "actions": [
+            {
+                "action": "call",
+                "playerName": "bot18",
+                "amount": 10,
+                "id": "35db3360-50eb-11f0-bbb5-3ddcc4f31f51"
+            },
+            {
+                "action": "call",
+                "playerName": "bot17",
+                "amount": 10,
+                "id": "35db0c51-50eb-11f0-bbb5-3ddcc4f31f51"
+            },
+            {
+                "action": "call",
+                "playerName": "D1w.4",
+                "amount": 10,
+                "id": "3230aea0-4f4e-11f0-b48e-eb57f77f6ff2"
+            },
+            {
+                "action": "call",
+                "playerName": "bot18",
+                "amount": 0,
+                "id": "35db3360-50eb-11f0-bbb5-3ddcc4f31f51"
+            },
+            {
+                "action": "call",
+                "playerName": "bot17",
+                "amount": 0,
+                "id": "35db0c51-50eb-11f0-bbb5-3ddcc4f31f51"
+            },
+            {
+                "action": "call",
+                "playerName": "D1w.4",
+                "amount": 0,
+                "id": "3230aea0-4f4e-11f0-b48e-eb57f77f6ff2"
+            },
+            {
+                "action": "bet",
+                "playerName": "bot18",
+                "amount": 251,
+                "id": "35db3360-50eb-11f0-bbb5-3ddcc4f31f51"
+            },
+            {
+                "action": "bet",
+                "playerName": "bot17",
+                "amount": 276,
+                "id": "35db0c51-50eb-11f0-bbb5-3ddcc4f31f51"
+            },
+            {
+                "action": "fold",
+                "playerName": "D1w.4",
+                "id": "3230aea0-4f4e-11f0-b48e-eb57f77f6ff2"
+            },
+            {
+                "action": "bet",
+                "playerName": "bot18",
+                "amount": 319,
+                "id": "35db3360-50eb-11f0-bbb5-3ddcc4f31f51"
+            },
+            {
+                "action": "allin",
+                "playerName": "bot17",
+                "amount": 714,
+                "id": "35db0c51-50eb-11f0-bbb5-3ddcc4f31f51"
+            },
+            {
+                "action": "allin",
+                "playerName": "bot18",
+                "amount": 671,
+                "id": "35db3360-50eb-11f0-bbb5-3ddcc4f31f51"
+            }
+        ],
+        "gameWinners": [
+            {
+                "playerName": "bot17",
+                "id": "35db0c51-50eb-11f0-bbb5-3ddcc4f31f51",
+                "chips": 2010,
+                "amount": 2010
+            }
+        ],
+        "created": 1751183073962
+    },
+    "e946c700-54bc-11f0-bc1a-8dc38c7beeb7": {
+        "id": "e946c700-54bc-11f0-bc1a-8dc38c7beeb7",
+        "tid": "784cf6a0-54bc-11f0-bc1a-8dc38c7beeb7",
+        "smallBlind": 5,
+        "bigBlind": 10,
+        "minBuyIn": 20,
+        "maxBuyIn": 1000,
+        "minPlayers": 2,
+        "maxPlayers": 10,
+        "gameMode": "normal",
+        "board": [
+            "9C",
+            "7C",
+            "4H",
+            "QH",
+            "AH"
+        ],
+        "creator": "3230aea0-4f4e-11f0-b48e-eb57f77f6ff2",
+        "players": [
+            {
+                "playerName": "D1w.4",
+                "id": "3230aea0-4f4e-11f0-b48e-eb57f77f6ff2",
+                "chips": 975,
+                "folded": true,
+                "allIn": false,
+                "talked": false,
+                "cards": [
+                    "7H",
+                    "6H"
+                ]
+            },
+            {
+                "playerName": "bot18",
+                "id": "35db3360-50eb-11f0-bbb5-3ddcc4f31f51",
+                "chips": 0,
+                "folded": false,
+                "allIn": true,
+                "talked": true,
+                "cards": [
+                    "5H",
+                    "7D"
+                ]
+            },
+            {
+                "playerName": "bot17",
+                "id": "35db0c51-50eb-11f0-bbb5-3ddcc4f31f51",
+                "chips": 2005,
+                "folded": true,
+                "allIn": true,
+                "talked": true,
+                "cards": [
+                    "3H",
+                    "9H"
+                ]
+            }
+        ],
+        "actions": [
+            {
+                "action": "call",
+                "playerName": "bot17",
+                "amount": 10,
+                "id": "35db0c51-50eb-11f0-bbb5-3ddcc4f31f51"
+            },
+            {
+                "action": "fold",
+                "playerName": "D1w.4",
+                "id": "3230aea0-4f4e-11f0-b48e-eb57f77f6ff2"
+            },
+            {
+                "action": "call",
+                "playerName": "bot18",
+                "amount": 10,
+                "id": "35db3360-50eb-11f0-bbb5-3ddcc4f31f51"
+            },
+            {
+                "action": "allin",
+                "playerName": "bot17",
+                "amount": 990,
+                "id": "35db0c51-50eb-11f0-bbb5-3ddcc4f31f51"
+            },
+            {
+                "action": "allin",
+                "playerName": "bot18",
+                "amount": 990,
+                "id": "35db3360-50eb-11f0-bbb5-3ddcc4f31f51"
+            }
+        ],
+        "gameWinners": [
+            {
+                "playerName": "bot17",
+                "id": "35db0c51-50eb-11f0-bbb5-3ddcc4f31f51",
+                "chips": 2005,
+                "amount": 2005
+            }
+        ],
+        "created": 1751183117298
+    },
+    "031c64f0-54bd-11f0-bc1a-8dc38c7beeb7": {
+        "id": "031c64f0-54bd-11f0-bc1a-8dc38c7beeb7",
+        "tid": "784cf6a0-54bc-11f0-bc1a-8dc38c7beeb7",
+        "smallBlind": 5,
+        "bigBlind": 10,
+        "minBuyIn": 20,
+        "maxBuyIn": 1000,
+        "minPlayers": 2,
+        "maxPlayers": 10,
+        "gameMode": "normal",
+        "board": [
+            "3H",
+            "4S",
+            "QC",
+            "5C",
+            "JS"
+        ],
+        "creator": "3230aea0-4f4e-11f0-b48e-eb57f77f6ff2",
+        "players": [
+            {
+                "playerName": "D1w.4",
+                "id": "3230aea0-4f4e-11f0-b48e-eb57f77f6ff2",
+                "chips": 975,
+                "folded": true,
+                "allIn": false,
+                "talked": false,
+                "cards": [
+                    "AH",
+                    "9C"
+                ]
+            },
+            {
+                "playerName": "bot18",
+                "id": "35db3360-50eb-11f0-bbb5-3ddcc4f31f51",
+                "chips": 1179,
+                "folded": true,
+                "allIn": false,
+                "talked": true,
+                "cards": [
+                    "4H",
+                    "5S"
+                ]
+            },
+            {
+                "playerName": "bot17",
+                "id": "35db0c51-50eb-11f0-bbb5-3ddcc4f31f51",
+                "chips": 821,
+                "folded": false,
+                "allIn": false,
+                "talked": true,
+                "cards": [
+                    "AS",
+                    "JD"
+                ]
+            }
+        ],
+        "actions": [
+            {
+                "action": "fold",
+                "playerName": "D1w.4",
+                "id": "3230aea0-4f4e-11f0-b48e-eb57f77f6ff2"
+            },
+            {
+                "action": "call",
+                "playerName": "bot18",
+                "amount": 10,
+                "id": "35db3360-50eb-11f0-bbb5-3ddcc4f31f51"
+            },
+            {
+                "action": "call",
+                "playerName": "bot17",
+                "amount": 10,
+                "id": "35db0c51-50eb-11f0-bbb5-3ddcc4f31f51"
+            },
+            {
+                "action": "call",
+                "playerName": "bot18",
+                "amount": 0,
+                "id": "35db3360-50eb-11f0-bbb5-3ddcc4f31f51"
+            },
+            {
+                "action": "call",
+                "playerName": "bot17",
+                "amount": 0,
+                "id": "35db0c51-50eb-11f0-bbb5-3ddcc4f31f51"
+            },
+            {
+                "action": "call",
+                "playerName": "bot18",
+                "amount": 0,
+                "id": "35db3360-50eb-11f0-bbb5-3ddcc4f31f51"
+            },
+            {
+                "action": "call",
+                "playerName": "bot17",
+                "amount": 0,
+                "id": "35db0c51-50eb-11f0-bbb5-3ddcc4f31f51"
+            },
+            {
+                "action": "bet",
+                "playerName": "bot18",
+                "amount": 169,
+                "id": "35db3360-50eb-11f0-bbb5-3ddcc4f31f51"
+            },
+            {
+                "action": "call",
+                "playerName": "bot17",
+                "amount": 169,
+                "id": "35db0c51-50eb-11f0-bbb5-3ddcc4f31f51"
+            }
+        ],
+        "gameWinners": [
+            {
+                "playerName": "bot18",
+                "id": "35db3360-50eb-11f0-bbb5-3ddcc4f31f51",
+                "chips": 1179,
+                "amount": 358
+            }
+        ],
+        "created": 1751183168657
+    },
+    "21b88ba0-54bd-11f0-bc1a-8dc38c7beeb7": {
+        "id": "21b88ba0-54bd-11f0-bc1a-8dc38c7beeb7",
+        "tid": "784cf6a0-54bc-11f0-bc1a-8dc38c7beeb7",
+        "smallBlind": 5,
+        "bigBlind": 10,
+        "minBuyIn": 20,
+        "maxBuyIn": 1000,
+        "minPlayers": 2,
+        "maxPlayers": 10,
+        "gameMode": "normal",
+        "board": [
+            "5D",
+            "3H",
+            "3D",
+            "KC",
+            "7H"
+        ],
+        "creator": "3230aea0-4f4e-11f0-b48e-eb57f77f6ff2",
+        "players": [
+            {
+                "playerName": "D1w.4",
+                "id": "3230aea0-4f4e-11f0-b48e-eb57f77f6ff2",
+                "chips": 965,
+                "folded": true,
+                "allIn": false,
+                "talked": true,
+                "cards": [
+                    "5C",
+                    "QS"
+                ]
+            },
+            {
+                "playerName": "bot18",
+                "id": "35db3360-50eb-11f0-bbb5-3ddcc4f31f51",
+                "chips": 989,
+                "folded": false,
+                "allIn": false,
+                "talked": true,
+                "cards": [
+                    "6C",
+                    "QD"
+                ]
+            },
+            {
+                "playerName": "bot17",
+                "id": "35db0c51-50eb-11f0-bbb5-3ddcc4f31f51",
+                "chips": 1021,
+                "folded": true,
+                "allIn": false,
+                "talked": true,
+                "cards": [
+                    "KD",
+                    "JH"
+                ]
+            }
+        ],
+        "actions": [
+            {
+                "action": "call",
+                "playerName": "bot18",
+                "amount": 10,
+                "id": "35db3360-50eb-11f0-bbb5-3ddcc4f31f51"
+            },
+            {
+                "action": "call",
+                "playerName": "bot17",
+                "amount": 10,
+                "id": "35db0c51-50eb-11f0-bbb5-3ddcc4f31f51"
+            },
+            {
+                "action": "call",
+                "playerName": "D1w.4",
+                "amount": 10,
+                "id": "3230aea0-4f4e-11f0-b48e-eb57f77f6ff2"
+            },
+            {
+                "action": "call",
+                "playerName": "bot18",
+                "amount": 0,
+                "id": "35db3360-50eb-11f0-bbb5-3ddcc4f31f51"
+            },
+            {
+                "action": "call",
+                "playerName": "bot17",
+                "amount": 0,
+                "id": "35db0c51-50eb-11f0-bbb5-3ddcc4f31f51"
+            },
+            {
+                "action": "call",
+                "playerName": "D1w.4",
+                "amount": 0,
+                "id": "3230aea0-4f4e-11f0-b48e-eb57f77f6ff2"
+            },
+            {
+                "action": "call",
+                "playerName": "bot18",
+                "amount": 0,
+                "id": "35db3360-50eb-11f0-bbb5-3ddcc4f31f51"
+            },
+            {
+                "action": "call",
+                "playerName": "bot17",
+                "amount": 0,
+                "id": "35db0c51-50eb-11f0-bbb5-3ddcc4f31f51"
+            },
+            {
+                "action": "call",
+                "playerName": "D1w.4",
+                "amount": 0,
+                "id": "3230aea0-4f4e-11f0-b48e-eb57f77f6ff2"
+            },
+            {
+                "action": "call",
+                "playerName": "bot18",
+                "amount": 0,
+                "id": "35db3360-50eb-11f0-bbb5-3ddcc4f31f51"
+            },
+            {
+                "action": "bet",
+                "playerName": "bot17",
+                "amount": 1,
+                "id": "35db0c51-50eb-11f0-bbb5-3ddcc4f31f51"
+            },
+            {
+                "action": "fold",
+                "playerName": "D1w.4",
+                "id": "3230aea0-4f4e-11f0-b48e-eb57f77f6ff2"
+            },
+            {
+                "action": "call",
+                "playerName": "bot18",
+                "amount": 1,
+                "id": "35db3360-50eb-11f0-bbb5-3ddcc4f31f51"
+            }
+        ],
+        "gameWinners": [
+            {
+                "playerName": "bot17",
+                "id": "35db0c51-50eb-11f0-bbb5-3ddcc4f31f51",
+                "chips": 1021,
+                "amount": 32
+            }
+        ],
+        "created": 1751183312018
+    },
+    "772bb2b0-54bd-11f0-bc1a-8dc38c7beeb7": {
+        "id": "772bb2b0-54bd-11f0-bc1a-8dc38c7beeb7",
+        "tid": "784cf6a0-54bc-11f0-bc1a-8dc38c7beeb7",
+        "smallBlind": 5,
+        "bigBlind": 10,
+        "minBuyIn": 20,
+        "maxBuyIn": 1000,
+        "minPlayers": 2,
+        "maxPlayers": 10,
+        "gameMode": "normal",
+        "board": [
+            "2S",
+            "KC",
+            "QD"
+        ],
+        "creator": "3230aea0-4f4e-11f0-b48e-eb57f77f6ff2",
+        "players": [
+            {
+                "playerName": "D1w.4",
+                "id": "3230aea0-4f4e-11f0-b48e-eb57f77f6ff2",
+                "chips": 960,
+                "folded": true,
+                "allIn": false,
+                "talked": false,
+                "cards": [
+                    "9H",
+                    "8S"
+                ]
+            },
+            {
+                "playerName": "bot18",
+                "id": "35db3360-50eb-11f0-bbb5-3ddcc4f31f51",
+                "chips": 990,
+                "folded": true,
+                "allIn": false,
+                "talked": true,
+                "cards": [
+                    "7H",
+                    "TH"
+                ]
+            },
+            {
+                "playerName": "bot17",
+                "id": "35db0c51-50eb-11f0-bbb5-3ddcc4f31f51",
+                "chips": 1015,
+                "folded": true,
+                "allIn": false,
+                "talked": true,
+                "cards": [
+                    "AD",
+                    "2D"
+                ]
+            }
+        ],
+        "actions": [
+            {
+                "action": "call",
+                "playerName": "bot17",
+                "amount": 10,
+                "id": "35db0c51-50eb-11f0-bbb5-3ddcc4f31f51"
+            },
+            {
+                "action": "fold",
+                "playerName": "D1w.4",
+                "id": "3230aea0-4f4e-11f0-b48e-eb57f77f6ff2"
+            },
+            {
+                "action": "call",
+                "playerName": "bot18",
+                "amount": 10,
+                "id": "35db3360-50eb-11f0-bbb5-3ddcc4f31f51"
+            },
+            {
+                "action": "bet",
+                "playerName": "bot17",
+                "amount": 266,
+                "id": "35db0c51-50eb-11f0-bbb5-3ddcc4f31f51"
+            },
+            {
+                "action": "fold",
+                "playerName": "bot18",
+                "id": "35db3360-50eb-11f0-bbb5-3ddcc4f31f51"
+            }
+        ],
+        "gameWinners": [
+            {
+                "playerName": "bot17",
+                "id": "35db0c51-50eb-11f0-bbb5-3ddcc4f31f51",
+                "chips": 1015,
+                "amount": 291
+            }
+        ],
+        "created": 1751183355358
+    },
+    "91001820-54bd-11f0-bc1a-8dc38c7beeb7": {
+        "id": "91001820-54bd-11f0-bc1a-8dc38c7beeb7",
+        "tid": "784cf6a0-54bc-11f0-bc1a-8dc38c7beeb7",
+        "smallBlind": 5,
+        "bigBlind": 10,
+        "minBuyIn": 20,
+        "maxBuyIn": 1000,
+        "minPlayers": 2,
+        "maxPlayers": 10,
+        "gameMode": "normal",
+        "board": [
+            "6C",
+            "9C",
+            "TC",
+            "JS",
+            "QH"
+        ],
+        "creator": "3230aea0-4f4e-11f0-b48e-eb57f77f6ff2",
+        "players": [
+            {
+                "playerName": "D1w.4",
+                "id": "3230aea0-4f4e-11f0-b48e-eb57f77f6ff2",
+                "chips": 960,
+                "folded": true,
+                "allIn": false,
+                "talked": false,
+                "cards": [
+                    "QS",
+                    "KC"
+                ]
+            },
+            {
+                "playerName": "bot18",
+                "id": "35db3360-50eb-11f0-bbb5-3ddcc4f31f51",
+                "chips": 1000,
+                "folded": true,
+                "allIn": false,
+                "talked": true,
+                "cards": [
+                    "TS",
+                    "5D"
+                ]
+            },
+            {
+                "playerName": "bot17",
+                "id": "35db0c51-50eb-11f0-bbb5-3ddcc4f31f51",
+                "chips": 1000,
+                "folded": true,
+                "allIn": false,
+                "talked": true,
+                "cards": [
+                    "TH",
+                    "7C"
+                ]
+            }
+        ],
+        "actions": [
+            {
+                "action": "fold",
+                "playerName": "D1w.4",
+                "id": "3230aea0-4f4e-11f0-b48e-eb57f77f6ff2"
+            },
+            {
+                "action": "call",
+                "playerName": "bot18",
+                "amount": 10,
+                "id": "35db3360-50eb-11f0-bbb5-3ddcc4f31f51"
+            },
+            {
+                "action": "call",
+                "playerName": "bot17",
+                "amount": 10,
+                "id": "35db0c51-50eb-11f0-bbb5-3ddcc4f31f51"
+            },
+            {
+                "action": "bet",
+                "playerName": "bot18",
+                "amount": 14,
+                "id": "35db3360-50eb-11f0-bbb5-3ddcc4f31f51"
+            },
+            {
+                "action": "call",
+                "playerName": "bot17",
+                "amount": 14,
+                "id": "35db0c51-50eb-11f0-bbb5-3ddcc4f31f51"
+            },
+            {
+                "action": "bet",
+                "playerName": "bot18",
+                "amount": 22,
+                "id": "35db3360-50eb-11f0-bbb5-3ddcc4f31f51"
+            },
+            {
+                "action": "bet",
+                "playerName": "bot17",
+                "amount": 61,
+                "id": "35db0c51-50eb-11f0-bbb5-3ddcc4f31f51"
+            },
+            {
+                "action": "bet",
+                "playerName": "bot18",
+                "amount": 90,
+                "id": "35db3360-50eb-11f0-bbb5-3ddcc4f31f51"
+            },
+            {
+                "action": "bet",
+                "playerName": "bot17",
+                "amount": 103,
+                "id": "35db0c51-50eb-11f0-bbb5-3ddcc4f31f51"
+            },
+            {
+                "action": "call",
+                "playerName": "bot18",
+                "amount": 103,
+                "id": "35db3360-50eb-11f0-bbb5-3ddcc4f31f51"
+            },
+            {
+                "action": "call",
+                "playerName": "bot18",
+                "amount": 0,
+                "id": "35db3360-50eb-11f0-bbb5-3ddcc4f31f51"
+            },
+            {
+                "action": "call",
+                "playerName": "bot17",
+                "amount": 0,
+                "id": "35db0c51-50eb-11f0-bbb5-3ddcc4f31f51"
+            }
+        ],
+        "gameWinners": [
+            {
+                "playerName": "bot18",
+                "id": "35db3360-50eb-11f0-bbb5-3ddcc4f31f51",
+                "chips": 1000,
+                "amount": 127
+            },
+            {
+                "playerName": "bot17",
+                "id": "35db0c51-50eb-11f0-bbb5-3ddcc4f31f51",
+                "chips": 1000,
+                "amount": 127
+            }
+        ],
+        "created": 1751183412709
+    },
+    "b33013f0-54bd-11f0-bc1a-8dc38c7beeb7": {
+        "id": "b33013f0-54bd-11f0-bc1a-8dc38c7beeb7",
+        "tid": "784cf6a0-54bc-11f0-bc1a-8dc38c7beeb7",
+        "smallBlind": 5,
+        "bigBlind": 10,
+        "minBuyIn": 20,
+        "maxBuyIn": 1000,
+        "minPlayers": 2,
+        "maxPlayers": 10,
+        "gameMode": "normal",
+        "board": [
+            "KH",
+            "6C",
+            "2C",
+            "9H"
+        ],
+        "creator": "3230aea0-4f4e-11f0-b48e-eb57f77f6ff2",
+        "players": [
+            {
+                "playerName": "D1w.4",
+                "id": "3230aea0-4f4e-11f0-b48e-eb57f77f6ff2",
+                "chips": 950,
+                "folded": true,
+                "allIn": false,
+                "talked": false,
+                "cards": [
+                    "3H",
+                    "TD"
+                ]
+            },
+            {
+                "playerName": "bot18",
+                "id": "35db3360-50eb-11f0-bbb5-3ddcc4f31f51",
+                "chips": 1105,
+                "folded": true,
+                "allIn": false,
+                "talked": true,
+                "cards": [
+                    "8H",
+                    "9S"
+                ]
+            },
+            {
+                "playerName": "bot17",
+                "id": "35db0c51-50eb-11f0-bbb5-3ddcc4f31f51",
+                "chips": 905,
+                "folded": true,
+                "allIn": false,
+                "talked": true,
+                "cards": [
+                    "JS",
+                    "8D"
+                ]
+            }
+        ],
+        "actions": [
+            {
+                "action": "call",
+                "playerName": "bot18",
+                "amount": 10,
+                "id": "35db3360-50eb-11f0-bbb5-3ddcc4f31f51"
+            },
+            {
+                "action": "call",
+                "playerName": "bot17",
+                "amount": 10,
+                "id": "35db0c51-50eb-11f0-bbb5-3ddcc4f31f51"
+            },
+            {
+                "action": "call",
+                "playerName": "D1w.4",
+                "amount": 10,
+                "id": "3230aea0-4f4e-11f0-b48e-eb57f77f6ff2"
+            },
+            {
+                "action": "bet",
+                "playerName": "bot18",
+                "amount": 85,
+                "id": "35db3360-50eb-11f0-bbb5-3ddcc4f31f51"
+            },
+            {
+                "action": "call",
+                "playerName": "bot17",
+                "amount": 85,
+                "id": "35db0c51-50eb-11f0-bbb5-3ddcc4f31f51"
+            },
+            {
+                "action": "fold",
+                "playerName": "D1w.4",
+                "id": "3230aea0-4f4e-11f0-b48e-eb57f77f6ff2"
+            },
+            {
+                "action": "bet",
+                "playerName": "bot18",
+                "amount": 237,
+                "id": "35db3360-50eb-11f0-bbb5-3ddcc4f31f51"
+            },
+            {
+                "action": "fold",
+                "playerName": "bot17",
+                "id": "35db0c51-50eb-11f0-bbb5-3ddcc4f31f51"
+            }
+        ],
+        "gameWinners": [
+            {
+                "playerName": "bot18",
+                "id": "35db3360-50eb-11f0-bbb5-3ddcc4f31f51",
+                "chips": 1105,
+                "amount": 437
+            }
+        ],
+        "created": 1751183490050
+    },
+    "e14764f0-54bd-11f0-bc1a-8dc38c7beeb7": {
+        "id": "e14764f0-54bd-11f0-bc1a-8dc38c7beeb7",
+        "tid": "784cf6a0-54bc-11f0-bc1a-8dc38c7beeb7",
+        "smallBlind": 5,
+        "bigBlind": 10,
+        "minBuyIn": 20,
+        "maxBuyIn": 1000,
+        "minPlayers": 2,
+        "maxPlayers": 10,
+        "gameMode": "normal",
+        "board": [
+            "5H",
+            "4H",
+            "QC",
+            "TC",
+            "7C"
+        ],
+        "creator": "3230aea0-4f4e-11f0-b48e-eb57f77f6ff2",
+        "players": [
+            {
+                "playerName": "D1w.4",
+                "id": "3230aea0-4f4e-11f0-b48e-eb57f77f6ff2",
+                "chips": 945,
+                "folded": true,
+                "allIn": false,
+                "talked": false,
+                "cards": [
+                    "AS",
+                    "3C"
+                ]
+            },
+            {
+                "playerName": "bot18",
+                "id": "35db3360-50eb-11f0-bbb5-3ddcc4f31f51",
+                "chips": 2005,
+                "folded": true,
+                "allIn": true,
+                "talked": true,
+                "cards": [
+                    "TD",
+                    "9S"
+                ]
+            },
+            {
+                "playerName": "bot17",
+                "id": "35db0c51-50eb-11f0-bbb5-3ddcc4f31f51",
+                "chips": 0,
+                "folded": false,
+                "allIn": true,
+                "talked": true,
+                "cards": [
+                    "KS",
+                    "6H"
+                ]
+            }
+        ],
+        "actions": [
+            {
+                "action": "call",
+                "playerName": "bot17",
+                "amount": 10,
+                "id": "35db0c51-50eb-11f0-bbb5-3ddcc4f31f51"
+            },
+            {
+                "action": "fold",
+                "playerName": "D1w.4",
+                "id": "3230aea0-4f4e-11f0-b48e-eb57f77f6ff2"
+            },
+            {
+                "action": "call",
+                "playerName": "bot18",
+                "amount": 10,
+                "id": "35db3360-50eb-11f0-bbb5-3ddcc4f31f51"
+            },
+            {
+                "action": "bet",
+                "playerName": "bot17",
+                "amount": 30,
+                "id": "35db0c51-50eb-11f0-bbb5-3ddcc4f31f51"
+            },
+            {
+                "action": "bet",
+                "playerName": "bot18",
+                "amount": 74,
+                "id": "35db3360-50eb-11f0-bbb5-3ddcc4f31f51"
+            },
+            {
+                "action": "allin",
+                "playerName": "bot17",
+                "amount": 960,
+                "id": "35db0c51-50eb-11f0-bbb5-3ddcc4f31f51"
+            },
+            {
+                "action": "allin",
+                "playerName": "bot18",
+                "amount": 916,
+                "id": "35db3360-50eb-11f0-bbb5-3ddcc4f31f51"
+            }
+        ],
+        "gameWinners": [
+            {
+                "playerName": "bot18",
+                "id": "35db3360-50eb-11f0-bbb5-3ddcc4f31f51",
+                "chips": 2005,
+                "amount": 2005
+            }
+        ],
+        "created": 1751183537380
+    },
+    "fd7e9990-54bd-11f0-bc1a-8dc38c7beeb7": {
+        "id": "fd7e9990-54bd-11f0-bc1a-8dc38c7beeb7",
+        "tid": "784cf6a0-54bc-11f0-bc1a-8dc38c7beeb7",
+        "smallBlind": 5,
+        "bigBlind": 10,
+        "minBuyIn": 20,
+        "maxBuyIn": 1000,
+        "minPlayers": 2,
+        "maxPlayers": 10,
+        "gameMode": "normal",
+        "board": [
+            "6D",
+            "6S",
+            "AC",
+            "5D",
+            "8H"
+        ],
+        "creator": "3230aea0-4f4e-11f0-b48e-eb57f77f6ff2",
+        "players": [
+            {
+                "playerName": "D1w.4",
+                "id": "3230aea0-4f4e-11f0-b48e-eb57f77f6ff2",
+                "chips": 945,
+                "folded": true,
+                "allIn": false,
+                "talked": false,
+                "cards": [
+                    "AS",
+                    "3D"
+                ]
+            },
+            {
+                "playerName": "bot18",
+                "id": "35db3360-50eb-11f0-bbb5-3ddcc4f31f51",
+                "chips": 1055,
+                "folded": true,
+                "allIn": false,
+                "talked": true,
+                "cards": [
+                    "2S",
+                    "9C"
+                ]
+            },
+            {
+                "playerName": "bot17",
+                "id": "35db0c51-50eb-11f0-bbb5-3ddcc4f31f51",
+                "chips": 945,
+                "folded": true,
+                "allIn": false,
+                "talked": true,
+                "cards": [
+                    "7D",
+                    "2C"
+                ]
+            }
+        ],
+        "actions": [
+            {
+                "action": "fold",
+                "playerName": "D1w.4",
+                "id": "3230aea0-4f4e-11f0-b48e-eb57f77f6ff2"
+            },
+            {
+                "action": "call",
+                "playerName": "bot18",
+                "amount": 10,
+                "id": "35db3360-50eb-11f0-bbb5-3ddcc4f31f51"
+            },
+            {
+                "action": "call",
+                "playerName": "bot17",
+                "amount": 10,
+                "id": "35db0c51-50eb-11f0-bbb5-3ddcc4f31f51"
+            },
+            {
+                "action": "call",
+                "playerName": "bot18",
+                "amount": 0,
+                "id": "35db3360-50eb-11f0-bbb5-3ddcc4f31f51"
+            },
+            {
+                "action": "call",
+                "playerName": "bot17",
+                "amount": 0,
+                "id": "35db0c51-50eb-11f0-bbb5-3ddcc4f31f51"
+            },
+            {
+                "action": "call",
+                "playerName": "bot18",
+                "amount": 0,
+                "id": "35db3360-50eb-11f0-bbb5-3ddcc4f31f51"
+            },
+            {
+                "action": "call",
+                "playerName": "bot17",
+                "amount": 0,
+                "id": "35db0c51-50eb-11f0-bbb5-3ddcc4f31f51"
+            },
+            {
+                "action": "bet",
+                "playerName": "bot18",
+                "amount": 39,
+                "id": "35db3360-50eb-11f0-bbb5-3ddcc4f31f51"
+            },
+            {
+                "action": "bet",
+                "playerName": "bot17",
+                "amount": 45,
+                "id": "35db0c51-50eb-11f0-bbb5-3ddcc4f31f51"
+            },
+            {
+                "action": "bet",
+                "playerName": "bot18",
+                "amount": 87,
+                "id": "35db3360-50eb-11f0-bbb5-3ddcc4f31f51"
+            },
+            {
+                "action": "fold",
+                "playerName": "bot17",
+                "id": "35db0c51-50eb-11f0-bbb5-3ddcc4f31f51"
+            }
+        ],
+        "gameWinners": [
+            {
+                "playerName": "bot18",
+                "id": "35db3360-50eb-11f0-bbb5-3ddcc4f31f51",
+                "chips": 1055,
+                "amount": 152
+            }
+        ],
+        "created": 1751183592731
     }
 }

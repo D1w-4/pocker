@@ -314,6 +314,7 @@ function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
+
 BotService.prototype.removeAllBots = function (tid, banBots) {
   var me = this, botAry = [];
   me.config.banBots = banBots;
