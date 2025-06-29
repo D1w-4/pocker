@@ -4,7 +4,7 @@ const server = express();
 const jsonwebtoken = require("jsonwebtoken");
 var {expressjwt} = require("express-jwt");
 var Hand = require('./../game/hand');
-
+const TableStore = require("../persistence/tables");
 var SESSION_CONFIG = require('../../../shared/config/session.json');
 
 class ApiComponent {
@@ -79,11 +79,6 @@ const start = (port) => (app) => {
 
   server.post('/create-table', function (req, res) {
     const tableService = app.get('tableService')
-    const tables = tableService.getByCreatorUid(req.auth.uid);
-    const tablePins = tables.map(table => table.table.pin)
-    if (tables && tables.length > 0) {
-      return res.status(400).json({error: 'A table has been created', code: 400, pin: tablePins[0]})
-    }
 
     tableService.createTable(req.auth.uid, {
       smallBlind: 5,
@@ -95,7 +90,7 @@ const start = (port) => (app) => {
       gameMode: 'easy'
     }, function (err, board) {
       if (err) {
-        return res.status(400).send(JSON.stringify({error: err, code: 400}))
+        return res.status(400).json({error: err, code: 400})
       }
       res.json(
         tableService.getTableJSON(board.id, req.auth.uid)
@@ -149,7 +144,16 @@ const start = (port) => (app) => {
     } catch (err) {
       return res.status(400).json({error: err, code: 400})
     }
+  })
 
+  server.get('/table-stats', function (req, res) {
+    TableStore.getByAttr('creator', req.auth.uid, (err, result) => {
+      if (err) {
+        return res.status(400).json({error: err, code: 400})
+      } else {
+        res.json(result);
+      }
+    })
   })
 
   server.post('/rank', function (req, res) {

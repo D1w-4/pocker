@@ -92,6 +92,20 @@ handler.getTable = function (msg, session, next) {
     });
   });
 }
+handler.startAdminGame = function (msg, session, next) {
+  this.app.get('tableService').startGame(msg.tid, function (e) {
+    if (e) {
+      next(null, {
+        code: 500,
+        error: e
+      });
+    }
+    next(null, {
+      code: 200,
+      route: msg.route
+    });
+  });
+};
 handler.joinAdminView = function (msg, session, next) {
 
   if (!session.uid) {

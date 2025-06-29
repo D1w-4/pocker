@@ -68,6 +68,11 @@ TableService.prototype.getTables = function () {
 };
 
 TableService.prototype.createTable = function (uid, obj, cb) {
+  const tables = this.getByCreatorUid(uid);
+  const tablePins = tables.map(table => table.table.pin)
+  if (tables && tables.length > 0) {
+    return cb(`table PIN:${tablePins[0]} has been created`)
+  }
   if (!obj || (obj && (
     isNaN(obj.smallBlind) ||
     isNaN(obj.bigBlind) ||
