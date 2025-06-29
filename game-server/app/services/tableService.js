@@ -45,13 +45,14 @@ TableService.prototype.getTables = function () {
   };
   for (var i in this.tables) {
     var table = this.tables[i];
-    var members = table.table.members.length;
     var players = (table.table.players.length - table.table.playersToRemove.length);
+    var members = players + table.table.playersToAdd.length;
     tables.totalMembers += members;
     tables.totalPlayers += players;
     tables.tables.push({
       id: table.id,
       pin: table.table.pin,
+      state: table.state,
       smallBlind: table.table.smallBlind,
       bigBlind: table.table.bigBlind,
       minBuyIn: table.table.minBuyIn,
@@ -107,6 +108,7 @@ TableService.prototype.createTable = function (uid, obj, cb) {
   Object.assign(resultTable, {
     id: table.id,
     pin: table.table.pin,
+    state: table.state,
     smallBlind: table.table.smallBlind,
     bigBlind: table.table.bigBlind,
     minBuyIn: table.table.minBuyIn,

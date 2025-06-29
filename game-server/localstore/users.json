@@ -114,7 +114,7 @@
         "largestWin": 2970,
         "friends": [],
         "created": 1750585771658,
-        "chips": 87000
+        "chips": 86000
     },
     "63d109e0-4f4f-11f0-b48e-eb57f77f6ff2": {
         "id": "63d109e0-4f4f-11f0-b48e-eb57f77f6ff2",
@@ -152,7 +152,7 @@
         "largestWin": 830,
         "friends": [],
         "created": 1750763159952,
-        "chips": 98415
+        "chips": 97415
     },
     "35da4901-50eb-11f0-bbb5-3ddcc4f31f51": {
         "id": "35da4901-50eb-11f0-bbb5-3ddcc4f31f51",
@@ -161,7 +161,7 @@
         "largestWin": 613,
         "friends": [],
         "created": 1750763159952,
-        "chips": 100283
+        "chips": 99283
     },
     "35da9720-50eb-11f0-bbb5-3ddcc4f31f51": {
         "id": "35da9720-50eb-11f0-bbb5-3ddcc4f31f51",
@@ -197,7 +197,7 @@
         "largestWin": 2000,
         "friends": [],
         "created": 1750763159957,
-        "chips": 99942
+        "chips": 98942
     },
     "35db0c51-50eb-11f0-bbb5-3ddcc4f31f51": {
         "id": "35db0c51-50eb-11f0-bbb5-3ddcc4f31f51",
@@ -206,16 +206,16 @@
         "largestWin": 2010,
         "friends": [],
         "created": 1750763159957,
-        "chips": 95295
+        "chips": 93285
     },
     "35db3360-50eb-11f0-bbb5-3ddcc4f31f51": {
         "id": "35db3360-50eb-11f0-bbb5-3ddcc4f31f51",
         "username": "bot18",
-        "wins": 7,
+        "wins": 8,
         "largestWin": 2010,
         "friends": [],
         "created": 1750763159958,
-        "chips": 97981
+        "chips": 95001
     },
     "35db3361-50eb-11f0-bbb5-3ddcc4f31f51": {
         "id": "35db3361-50eb-11f0-bbb5-3ddcc4f31f51",
@@ -224,7 +224,7 @@
         "largestWin": 2010,
         "friends": [],
         "created": 1750763159958,
-        "chips": 46425
+        "chips": 40425
     },
     "35db5a70-50eb-11f0-bbb5-3ddcc4f31f51": {
         "id": "35db5a70-50eb-11f0-bbb5-3ddcc4f31f51",
@@ -233,7 +233,7 @@
         "largestWin": 2010,
         "friends": [],
         "created": 1750763159959,
-        "chips": 48740
+        "chips": 41740
     },
     "6cebb3e0-51a7-11f0-8b09-9131abd9ecf3": {
         "id": "6cebb3e0-51a7-11f0-8b09-9131abd9ecf3",
