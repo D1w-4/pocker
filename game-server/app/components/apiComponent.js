@@ -1,11 +1,12 @@
 const bodyParser = require('body-parser')
 const express = require('express');
 const server = express();
-const jsonwebtoken = require("jsonwebtoken");
-var {expressjwt} = require("express-jwt");
+const jsonwebtoken = require('jsonwebtoken');
+var {expressjwt} = require('express-jwt');
 var Hand = require('./../game/hand');
-const TableStore = require("../persistence/tables");
+const TableStore = require('../persistence/tables');
 var SESSION_CONFIG = require('../../../shared/config/session.json');
+const rateLimit = require('express-rate-limit');
 
 class ApiComponent {
 
@@ -16,21 +17,34 @@ const maxBuyIn = 1000
 const buyIn = 1000;
 server.use(expressjwt({
   secret: SESSION_CONFIG.secret,
-  algorithms: ["HS256"],
+  algorithms: ['HS256'],
   getToken: function fromHeaderOrQuerystring(req) {
     if (
       req.headers.authorization &&
-      req.headers.authorization.split(" ")[0] === "Bearer"
+      req.headers.authorization.split(' ')[0] === 'Bearer'
     ) {
-      const token = req.headers.authorization.split(" ")[1];
+      const token = req.headers.authorization.split(' ')[1];
       return token;
     } else if (req.query && req.query.token) {
       return req.query.token;
     }
     return null;
   },
-}).unless({path: ["/register"]}))
+}).unless({path: ['/register']}))
 server.use(bodyParser.json())
+server.use(rateLimit({
+  windowMs: 1000, // 1 секунда
+  max: 2,
+  keyGenerator: (req) => {
+    return req.auth.uid;
+  },
+  standardHeaders: true,
+  legacyHeaders: false,
+  message: {
+    error: 'Too many requests, please try again later.',
+    code: 429
+  }
+}))
 
 const start = (port) => (app) => {
   const service = new ApiComponent()
@@ -51,7 +65,7 @@ const start = (port) => (app) => {
       }
       res.json({
         token: jsonwebtoken.sign({uid: user.id}, SESSION_CONFIG.secret, {
-          algorithm: "HS256",
+          algorithm: 'HS256',
         })
       });
     });
@@ -72,7 +86,7 @@ const start = (port) => (app) => {
     // })
   })
 
-  server.get("/bords", function (req, res) {
+  server.get('/bords', function (req, res) {
     const tableService = app.get('tableService')
     res.json(tableService.getTables());
   })

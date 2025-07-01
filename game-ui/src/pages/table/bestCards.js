@@ -83,7 +83,7 @@ function rankHand(cards) {
   const groups=groupByRank(cards);
   if(groups[0].length===4){
     const kicker=groups[1].sort((a,b)=>cardValue(b)-cardValue(a))[0];
-    return {rank:7,message:"Four of a Kind",combination:[...groups[0],kicker]};
+    return {rank:7,message:"Four of a Kind",combination:[...groups[0]], kicker};
   }
 
   if(groups[0].length===3 && groups[1].length>=2){
@@ -102,17 +102,17 @@ function rankHand(cards) {
 
   if(groups[0].length===3){
     const kicker=groups.slice(1).flat().sort((a,b)=>cardValue(b)-cardValue(a))[0];
-    return {rank:3,message:"Three of a Kind",combination:[...groups[0],kicker]};
+    return {rank:3,message:"Three of a Kind",combination:[...groups[0]], kicker};
   }
 
   if(groups[0].length===2 && groups[1].length===2){
     const kicker=groups.slice(2).flat().sort((a,b)=>cardValue(b)-cardValue(a))[0];
-    return {rank:2,message:"Two Pair",combination:[...groups[0],...groups[1],kicker]};
+    return {rank:2,message:"Two Pair",combination:[...groups[0],...groups[1]], kicker };
   }
 
   if(groups[0].length===2){
     const kicker=groups.slice(1).flat().sort((a,b)=>cardValue(b)-cardValue(a))[0];
-    return {rank:1,message:"One Pair",combination:[...groups[0],kicker]};
+    return {rank:1,message:"One Pair",combination:[...groups[0]], kicker};
   }
 
   // High Card

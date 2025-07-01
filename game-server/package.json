@@ -8,6 +8,7 @@
     "body-parser": "^2.2.0",
     "express": "^5.1.0",
     "express-jwt": "^8.5.1",
+    "express-rate-limit": "^7.5.1",
     "hoyle": "^0.2.2",
     "jsonwebtoken": "^9.0.2",
     "node-uuid": "^1.4.1",

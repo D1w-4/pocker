@@ -14,13 +14,19 @@ export interface GameState {
   players: Player[];
   playersToRemove: Player[];
   playersToAdd: Player[];
-  gameWinners: any[];        // could be expanded if known
+  gameWinners: IGameWinner[];        // could be expanded if known
   actions: IAction[];            // could be expanded if known
   game: GameDetails | {};
   board: string[];           // community cards
   currentPlayer: number;
 }
 
+export interface IGameWinner {
+  amount: number;
+  chips: number;
+  id: string
+  playerName: string
+}
 export interface IAction {
   action: 'check' | 'fold' | 'bet' | 'call' | 'allin';
   amount?: number;

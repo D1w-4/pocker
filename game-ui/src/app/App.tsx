@@ -1,14 +1,28 @@
-import { createTheme, Flex, Loader, MantineProvider } from '@mantine/core';
+import { createTheme, Flex, Loader, MantineColorsTuple, MantineProvider } from '@mantine/core';
 import { wsApi } from 'api';
 import { appRouter } from 'app/routes';
 import { useSubscribe } from 'hooks';
 import React, { useEffect, useState } from 'react';
 import { RouterProvider } from 'react-router-dom';
 
-const theme = createTheme({
-  /** Put your mantine theme override here */
+const tochkaColors: MantineColorsTuple = [
+  '#f5ebff',
+  '#e4d5fd',
+  '#c5a9f3',
+  '#a57aeb',
+  '#8951e3',
+  '#7838df',
+  '#6f2ade',
+  '#5e1ec6',
+  '#5419b2',
+  '#47139d'
+];
+const themeScheme = createTheme({
+  colors: {
+    tochka: tochkaColors
+  },
+  primaryColor: 'tochka'
 });
-
 export const App = () => {
   const user = useSubscribe(wsApi.user$);
   const [loading, setLoading] = useState(true);
@@ -16,7 +30,6 @@ export const App = () => {
     if (user === null) {
       setLoading(true);
       wsApi.onConnect.then(() => {
-        console.log('resolve')
         wsApi.refresh((data) => {
           if (!data.user) {
             appRouter.navigate('/login');
@@ -28,7 +41,7 @@ export const App = () => {
   }, [user]);
   if (loading) {
     return (
-      <MantineProvider theme={theme}>
+      <MantineProvider theme={themeScheme}>
         <Flex h={'100vh'} justify={'center'} align={'center'}>
           <Loader/>
         </Flex>
@@ -36,7 +49,7 @@ export const App = () => {
     );
   }
   return (
-    <MantineProvider theme={theme}>
+    <MantineProvider theme={themeScheme}>
       <RouterProvider router={appRouter}></RouterProvider>
     </MantineProvider>
   );

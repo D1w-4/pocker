@@ -18,7 +18,6 @@ export class WsApi {
         port: 3014
       }, () => {
         connectionClient.request('gate.gateHandler.queryEntry', {}, (res) => {
-          console.log('result', res);
 
           client.init({
             host: res.host,
@@ -88,13 +87,6 @@ export class WsApi {
     return tables$;
   }
 
-  onUpdateUser() {
-    const client = this.client;
-    client.on('onUpdateUsers', (data) => {
-      console.log('onUpdateUsers', data);
-    });
-  }
-
   onBroadcastTable(tid: string, cb?: (data: any) => void) {
     const client = this.client;
     return client.on(`broadcastGameState.${tid}`, (data) => {
@@ -105,7 +97,6 @@ export class WsApi {
   onUpdateTable() {
     const client = this.client;
     return client.on('updateTable', (res) => {
-      console.log('onUpdateTable', res);
       tables$.next([
         res.data,
         ...tables$.value
@@ -133,16 +124,8 @@ export class WsApi {
 
   getTable(tid: string, cb?: (arg: any) => void) {
     const client = this.client;
-    console.log('getTable', tid);
     client.request('game.tableHandler.getTable', { tid }, (res) => {
       cb && cb(res.table);
-    });
-  }
-
-  joinTable(tid: string) {
-    const client = this.client;
-    client.request('game.tableHandler.joinTable', { tid }, (res) => {
-      console.log('joined', res);
     });
   }
 

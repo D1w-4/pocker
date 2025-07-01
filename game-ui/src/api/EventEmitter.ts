@@ -27,9 +27,7 @@ export class EventEmitter {
     ) {
       console.warn(`Possible memory leak: more than ${this._maxListeners} listeners`);
     }
-    console.log('create', event, this._events)
     return () => {
-      console.log('remove', event)
       this.removeListener(event, listener);
     };
   }

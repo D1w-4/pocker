@@ -1,5 +1,5 @@
 import { wsApi } from 'api';
-import { GameState, IAction, Player } from 'api/models/GameTable';
+import { GameState, IAction, IGameWinner, Player } from 'api/models/GameTable';
 import { TopUsers } from './../../components';
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
@@ -50,7 +50,7 @@ function GameCard(props: { card: string }) {
     }
     str += '.png';
     setSrc(str);
-  }, []);
+  }, [card]);
   return (
     <img style={{ width: '100%' }} src={`/cards/${src}`} alt=""/>
   );
@@ -63,10 +63,8 @@ export function Table(): React.ReactElement {
     if (!id) {
       return;
     }
-    // setTableData(JSON.parse(mock));
     wsApi.getTable(id, setTableData);
     const unsub = wsApi.onBroadcastTable(id, (data) => {
-      console.log('broadcastTable', data);
       setTableData(data);
     });
     return () => {
@@ -74,9 +72,6 @@ export function Table(): React.ReactElement {
     };
   }, [id]);
 
-  useEffect(() => {
-    console.log(tableData);
-  }, [tableData]);
   if (!tableData) {
     return <></>;
   }
@@ -291,9 +286,14 @@ function Actions(props: IActionsProps): React.ReactElement {
   return (
     <MTable striped>
       <MTable.Tbody>
-        {props.actions.map((action, i) => {
+        {props.actions.map((s, i) => {
+          return {
+            ...s,
+            index: i
+          };
+        }).reverse().map((action, i) => {
           return (
-            <MTable.Tr key={i}>
+            <MTable.Tr key={action.index} bg={i === 0 ? 'green' : 'transparent'}>
               <MTable.Td>
                 <Text>{action.playerName}</Text>
               </MTable.Td>
@@ -365,6 +365,7 @@ export function GameResult(props: { tid: string }) {
   return (
     <div>
       <Select
+        mb={'lg'}
         onChange={(value) => {
           setGameNumber(value);
         }}
@@ -372,13 +373,13 @@ export function GameResult(props: { tid: string }) {
       />
       <MTable striped>
         <MTable.Tbody>
-          {game.players.map((player) => {
+          {game.players.map((player, i) => {
             const isWin = wIds.includes(player.id);
             const cards = [...player.cards, ...game.board];
             const bestHand = getBestCards(cards);
             const rank = rankHandInt({ cards });
             return (
-              <MTable.Tr bg={isWin ? 'green' : 'transparent'}>
+              <MTable.Tr key={i} bg={isWin ? 'green' : 'transparent'}>
                 <MTable.Td valign={'top'}>
                   <Text size={'lg'} fw={'bold'}>{player.playerName}</Text>
                   <Flex direction={'column'} gap={5}>
@@ -391,13 +392,44 @@ export function GameResult(props: { tid: string }) {
                 <MTable.Td valign={'top'}>
                   <Text mb={10} fw={'bold'} size={'lg'}>{rank.message}</Text>
                   <Flex gap={5}>
-                    {cards.map((card) => {
+                    {cards.map((item) => {
+                      const isComb = bestHand.combination.includes(item);
+                      const isKicker = bestHand.kicker === item;
+                      let order = 3;
+                      if (isComb) {order = 0;}
+                      if (isKicker) {order = 1;}
+                      return {
+                        card: item,
+                        order
+                      };
+                    }).sort((a, b) => {
+                      return a.order > b.order ? 1 : -1;
+                    }).sort((a, b) => {
+                      const indexA = bestHand.combination.indexOf(a.card);
+                      const indexB = bestHand.combination.indexOf(b.card);
+                      if (indexA === -1 && indexB === -1) {
+                        return 0;
+                      }
+                      return indexA > indexB ? -1 : 1;
+                    }).map(({ card }) => {
                       const isComb = bestHand.combination.includes(card);
+                      const isKicker = bestHand.kicker === card;
+                      console.log(card);
+                      if (isKicker) {
+                        return (<div style={{
+                          width: 100,
+                          opacity: 1,
+                          transform: 'translateY(-40px)'
+                        }}>
+                          <Text fw={'bold'} size={'lg'}>Kicker</Text>
+                          <GameCard card={card}/>
+                        </div>);
+                      }
                       return (
                         <div style={{
                           width: 100,
-                          transform: isComb ? 'translateY(-10px)' : '',
-                          opacity: isComb ? 1 : '0.6'
+                          transform: isComb ? 'translateY(-10px)' : 'translateY(5px)',
+                          opacity: isComb ? 1 : '0.3'
                         }}>
                           <GameCard card={card}/>
                         </div>
@@ -418,16 +450,22 @@ export function PokerTable(props: PokerTableProps) {
   const { tid, actions, pin, board, gameWinners, state, game, players, currentPlayer, playersToAdd } = props.state;
   const resultPlayer = state === 'JOIN' ? playersToAdd : players;
   const [showResult, setShowResult] = React.useState(false);
+
+  useEffect(() => {
+    if (gameWinners.length) {
+      setShowResult(true);
+    }
+  }, [gameWinners]);
   return (
     <>
-      <Modal fullScreen opened={showResult} onClose={() => setShowResult(false)}>
+      <Modal title={<Title>Результаты</Title>} fullScreen opened={showResult} onClose={() => setShowResult(false)}>
         {showResult && (<GameResult tid={tid}/>)}
       </Modal>
       <Flex h={'100vh'} justify={'space-between'}>
         <div style={{ alignSelf: 'start' }}>
           <TopUsers/>
         </div>
-        <div>
+        <div style={{ position: 'fixed', top: 0, left: '50%', transform: 'translateX(-50%)' }}>
           <Flex direction={'column'} align={'center'} justify={'center'}>
             <Title mb={'lg'} fs={'300px'} ta={'center'} fw={'bold'}>PIN: {pin}</Title>
             <Button.Group>
