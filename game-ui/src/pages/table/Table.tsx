@@ -260,7 +260,7 @@ function Player({ index, player, bet = 0, role }: PlayerProps) {
             </Flex>
             <Text style={{
               transform: `rotate(${contentRotate[direction]}deg)`
-            }} fw={700} size="xl">${bet}</Text>
+            }} fw={700} size="xl">{!!bet ? `$${bet}` : (<>&nbsp;</>)}</Text>
           </Box>
         )}
         {folded && (<Badge style={{
@@ -414,7 +414,6 @@ export function GameResult(props: { tid: string }) {
                     }).map(({ card }) => {
                       const isComb = bestHand.combination.includes(card);
                       const isKicker = bestHand.kicker === card;
-                      console.log(card);
                       if (isKicker) {
                         return (<div style={{
                           width: 100,
@@ -450,7 +449,10 @@ export function PokerTable(props: PokerTableProps) {
   const { tid, actions, pin, board, gameWinners, state, game, players, currentPlayer, playersToAdd } = props.state;
   const resultPlayer = state === 'JOIN' ? playersToAdd : players;
   const [showResult, setShowResult] = React.useState(false);
-
+  const bank = actions.reduce((acc, v) => {
+    return acc + (v.amount || 0);
+  }, 0);
+  console.log(props.state);
   useEffect(() => {
     if (gameWinners.length) {
       setShowResult(true);
@@ -513,7 +515,14 @@ export function PokerTable(props: PokerTableProps) {
                 </React.Fragment>
               );
             })}
-
+            <Text style={{
+              position: 'absolute',
+              top: 220,
+              left: 0,
+              width: '100%',
+              textAlign: 'center',
+              zIndex: 3
+            }} fw='bold' c='white' size='30px'>${bank}</Text>
             <BoardCards cards={board}/>
 
             <Box
