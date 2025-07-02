@@ -1,5 +1,5 @@
 import { wsApi } from 'api';
-import { GameState, IAction, IGameWinner, Player } from 'api/models/GameTable';
+import { GameState, IAction, Player } from 'api/models/GameTable';
 import { TopUsers } from './../../components';
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';

@@ -7,6 +7,12 @@ var Hand = require('./../game/hand');
 const TableStore = require('../persistence/tables');
 var SESSION_CONFIG = require('../../../shared/config/session.json');
 const rateLimit = require('express-rate-limit');
+const tableInfoMap = require('./tableInfoMap');
+const swaggerUi = require('swagger-ui-express');
+const YAML = require('yamljs');
+const path = require('path');
+
+const swaggerDocument = YAML.load(path.resolve(__dirname, './openapi.yml'));
 
 class ApiComponent {
 
@@ -15,6 +21,9 @@ class ApiComponent {
 const minBuyIn = 20
 const maxBuyIn = 1000
 const buyIn = 1000;
+
+server.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument))
+
 server.use(expressjwt({
   secret: SESSION_CONFIG.secret,
   algorithms: ['HS256'],
@@ -32,6 +41,7 @@ server.use(expressjwt({
   },
 }).unless({path: ['/register']}))
 server.use(bodyParser.json())
+
 server.use(rateLimit({
   windowMs: 1000, // 1 секунда
   max: 2,
@@ -43,6 +53,9 @@ server.use(rateLimit({
   message: {
     error: 'Too many requests, please try again later.',
     code: 429
+  },
+  skip: (req) => {
+    return req.url.includes('/register')
   }
 }))
 
@@ -69,26 +82,6 @@ const start = (port) => (app) => {
         })
       });
     });
-
-    // UserStore.create({
-    //   username: req.body.username,
-    // }, (error, user) => {
-    //   if (error) {
-    //     res.status(500).send({error})
-    //     return;
-    //   }
-    //   const jwtStr = jsonwebtoken.sign(
-    //     {id: user.id, username: user.username},
-    //     secret,
-    //     {expiresIn: "30 days"}
-    //   )
-    //   res.json({token: jwtStr});
-    // })
-  })
-
-  server.get('/bords', function (req, res) {
-    const tableService = app.get('tableService')
-    res.json(tableService.getTables());
   })
 
   server.post('/create-table', function (req, res) {
@@ -107,7 +100,10 @@ const start = (port) => (app) => {
         return res.status(400).json({error: err, code: 400})
       }
       res.json(
-        tableService.getTableJSON(board.id, req.auth.uid)
+        tableInfoMap(
+          tableService.getTableJSON(board.id, req.auth.uid),
+          req.auth.uid
+        )
       );
     });
   })
@@ -121,7 +117,12 @@ const start = (port) => (app) => {
       if (err) {
         return res.status(400).json({error: err, code: 400})
       }
-      return res.json(tableService.getTableJSON(tid, req.auth.uid));
+      return res.json(
+        tableInfoMap(
+          tableService.getTableJSON(tid, req.auth.uid),
+          req.auth.uid
+        )
+      );
     })
   })
 
@@ -141,7 +142,12 @@ const start = (port) => (app) => {
       if (err) {
         return res.status(400).json({error: err, code: 400})
       }
-      return res.json(tableService.getTableJSON(tid, req.auth.uid));
+      return res.json(
+        tableInfoMap(
+          tableService.getTableJSON(tid, req.auth.uid),
+          req.auth.uid
+        )
+      );
     })
   })
 
@@ -154,7 +160,12 @@ const start = (port) => (app) => {
       if (!tableInfo) {
         throw 'Table not found';
       }
-      return res.json(tableInfo);
+      return res.json(
+        tableInfoMap(
+          tableService.getTableJSON(tid, req.auth.uid),
+          req.auth.uid
+        )
+      );
     } catch (err) {
       return res.status(400).json({error: err, code: 400})
     }

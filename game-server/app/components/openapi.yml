@@ -1,0 +1,612 @@
+openapi: 3.0.0
+info:
+  title: Poker Game API
+  version: 1.0.0
+  description: |
+    API для управления игрой в покер.  
+    Все методы, кроме регистрации, требуют Bearer JWT токен.
+
+servers:
+  - url: http://localhost:3000
+
+components:
+  securitySchemes:
+    BearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+
+  schemas:
+    RegisterRequest:
+      type: object
+      required:
+        - username
+        - password
+        - email
+      properties:
+        username:
+          type: string
+        password:
+          type: string
+        email:
+          type: string
+
+    RegisterResponse:
+      type: object
+      properties:
+        token:
+          type: string
+
+    TableInfo:
+      type: object
+      properties:
+        state:
+          type: string
+          enum: [JOIN, IN_PROGRESS]
+          description: |
+            Состояние игры:
+            - **JOIN** – Идёт ожидание подключения игроков к столу.
+            - **IN_PROGRESS** – Игра началась, ведётся раздача.
+        id:
+          type: string
+          description: |
+            Уникальный идентификатор стола.
+        pin:
+          type: string
+          description: |
+            Короткий пин-код для подключения игроков к столу.
+            Используется в большинстве методов вместо ID.
+        smallBlind:
+          type: number
+          description: |
+            Размер малого блайнда (обязательная ставка игрока слева от дилера).
+        bigBlind:
+          type: number
+          description: |
+            Размер большого блайнда (обязательная ставка второго игрока слева от дилера).
+        minBuyIn:
+          type: number
+          description: |
+            Минимальная сумма для входа в игру за этот стол.
+        maxBuyIn:
+          type: number
+          description: |
+            Максимальная сумма для входа в игру за этот стол.
+        board:
+          type: array
+          description: |
+            Карты, выложенные на столе (флоп, терн, ривер).
+          items:
+            type: string
+        cards:
+          type: array
+          description: |
+            Карты, находящиеся в руке у текущего пользователя.
+          items:
+            type: string
+        yourMove:
+          type: boolean
+          description: |
+            Флаг, указывающий, что сейчас ход текущего пользователя.
+        players:
+          type: array
+          description: |
+            Список всех игроков за столом с их состоянием.
+          items:
+            $ref: '#/components/schemas/Player'
+        bankAmount:
+          type: number
+          description: |
+            Общая сумма фишек, находящаяся в банке текущей раздачи.
+        actions:
+          type: array
+          description: |
+            Список действий игроков в текущей раздаче (ставки, коллы, фолды).
+          items:
+            $ref: '#/components/schemas/Action'
+      example:
+        state: "IN_PROGRESS"
+        id: "1575dff0-5742-11f0-b7d1-e505a1519387"
+        pin: "7970"
+        smallBlind: 5
+        bigBlind: 10
+        minBuyIn: 20
+        maxBuyIn: 1000
+        board: [ ]
+        cards:
+          - "8S"
+          - "2H"
+        yourMove: true
+        players:
+          - id: "a553e3e1-573f-11f0-9bba-77b1210078e4"
+            playerName: "bot20"
+            chips: 990
+            folded: false
+            allIn: false
+          - id: "a553e3e0-573f-11f0-9bba-77b1210078e4"
+            playerName: "bot19"
+            chips: 990
+            folded: false
+            allIn: false
+          - id: "3230aea0-4f4e-11f0-b48e-eb57f77f6ff2"
+            playerName: "D1w.4"
+            chips: 990
+            folded: false
+            allIn: false
+        bankAmount: 20
+        actions:
+          - id: "a553e3e1-573f-11f0-9bba-77b1210078e4"
+            playerName: "bot20"
+            action: "call"
+            amount: 10
+          - id: "a553e3e0-573f-11f0-9bba-77b1210078e4"
+            playerName: "bot19"
+            action: "call"
+            amount: 10
+
+    Player:
+      type: object
+      properties:
+        id:
+          type: string
+          description: Уникальный идентификатор игрока
+        playerName:
+          type: string
+          description: Имя игрока
+        chips:
+          type: number
+          description: Количество фишек
+        folded:
+          type: boolean
+          description: Игрок сбросил карты
+        allIn:
+          type: boolean
+          description: Игрок играет ва-банк (all in)
+      example:
+        id: "3230aea0-4f4e-11f0-b48e-eb57f77f6ff2"
+        playerName: "D1w.4"
+        chips: 960
+        folded: true
+        allIn: false
+
+    Action:
+      type: object
+      properties:
+        id:
+          type: string
+          description: ID игрока, совершившего действие
+        playerName:
+          type: string
+          description: Имя игрока
+        action:
+          type: string
+          description: Тип действия
+          enum: [call, allin, fold, bet]
+        amount:
+          type: number
+          description: Сумма ставки (если применимо)
+      example:
+        id: "a553e3e1-573f-11f0-9bba-77b1210078e4"
+        playerName: "D1w.4"
+        action: "call"
+        amount: 10
+    ErrorResponse:
+      type: object
+      properties:
+        code:
+          type: integer
+        error:
+          type: string
+
+    CreateTableResponse:
+      $ref: '#/components/schemas/TableInfo'
+
+    JoinTableRequest:
+      type: object
+      required:
+        - pin
+      properties:
+        pin:
+          type: string
+          description: Поле pin нужного стола. Можно получить при создании стола /create-table
+
+    ActionRequest:
+      type: object
+      required:
+        - type
+        - pin
+      properties:
+        type:
+          type: string
+          description: |
+            Тип действия игрока:
+
+            - **call** – Уравнять текущую ставку (поставить столько же, сколько предыдущий игрок).
+            - **allin** – Поставить все свои оставшиеся фишки.
+            - **fold** – Сбросить карты и выйти из раздачи.
+            - **bet** – Сделать ставку.
+          enum: [call, allin, fold, bet]
+        pin:
+          type: string
+          description: Пин-код стола, в котором происходит действие.
+        betAmount:
+          type: number
+          description: |
+            Сумма ставки для действия **bet**.  
+            Обязательный параметр, если `type` = `bet`.
+
+    RankRequest:
+      type: object
+      required:
+        - cards
+      properties:
+        cards:
+          type: array
+          description: |
+            Список карт, по которым нужно определить ранг комбинации.
+            Каждая карта задается в формате: **значение + масть** (например, "8D").
+          items:
+            type: string
+      example:
+        cards: ["8D", "QD", "7H", "4S", "6D", "QS"]
+
+    RankResponse:
+      type: object
+      properties:
+        rank:
+          type: number
+          description: |
+            Числовое значение ранга комбинации.
+      example:
+        rank: 19.0056
+
+    TableStatsItem:
+      type: object
+      description: |
+        Объект с полной информацией о завершенной игре за столом.
+      properties:
+        id:
+          type: string
+          description: Уникальный идентификатор записи о столе.
+        tid:
+          type: string
+          description: Идентификатор стола.
+        smallBlind:
+          type: number
+          description: Размер малого блайнда.
+        bigBlind:
+          type: number
+          description: Размер большого блайнда.
+        minBuyIn:
+          type: number
+          description: Минимальная сумма для входа.
+        maxBuyIn:
+          type: number
+          description: Максимальная сумма для входа.
+        minPlayers:
+          type: number
+          description: Минимальное количество игроков.
+        maxPlayers:
+          type: number
+          description: Максимальное количество игроков.
+        gameMode:
+          type: string
+          description: Режим игры.
+        board:
+          type: array
+          description: Карты на борде в финале игры.
+          items:
+            type: string
+        creator:
+          type: string
+          description: ID пользователя, создавшего стол.
+        players:
+          type: array
+          description: Список игроков с финальным состоянием.
+          items:
+            type: object
+            properties:
+              playerName:
+                type: string
+                description: Имя игрока.
+              id:
+                type: string
+                description: ID игрока.
+              chips:
+                type: number
+                description: Количество фишек у игрока.
+              folded:
+                type: boolean
+                description: Игрок сбросил карты.
+              allIn:
+                type: boolean
+                description: Игрок пошел ва-банк.
+              talked:
+                type: boolean
+                description: Игрок уже совершил ход.
+              cards:
+                type: array
+                description: Карты игрока.
+                items:
+                  type: string
+        actions:
+          type: array
+          description: Все действия игроков за столом.
+          items:
+            $ref: '#/components/schemas/Action'
+        gameWinners:
+          type: array
+          description: Список победителей раздачи.
+          items:
+            type: object
+            properties:
+              playerName:
+                type: string
+                description: Имя победителя.
+              id:
+                type: string
+                description: ID победителя.
+              chips:
+                type: number
+                description: Количество фишек после выигрыша.
+              amount:
+                type: number
+                description: Сумма выигрыша.
+        created:
+          type: integer
+          description: Таймстамп создания стола в миллисекундах.
+      example:
+        id: "8d77c4a0-5742-11f0-b7d1-e505a1519387"
+        tid: "1575dff0-5742-11f0-b7d1-e505a1519387"
+        smallBlind: 5
+        bigBlind: 10
+        minBuyIn: 20
+        maxBuyIn: 1000
+        minPlayers: 2
+        maxPlayers: 10
+        gameMode: "normal"
+        board: ["QH", "JS", "8H", "5S"]
+        creator: "3230aea0-4f4e-11f0-b48e-eb57f77f6ff2"
+        players:
+          - playerName: "D1w.4"
+            id: "3230aea0-4f4e-11f0-b48e-eb57f77f6ff2"
+            chips: 955
+            folded: true
+            allIn: false
+            talked: false
+            cards: ["4S", "KD"]
+          - playerName: "bot20"
+            id: "a553e3e1-573f-11f0-9bba-77b1210078e4"
+            chips: 1127
+            folded: true
+            allIn: false
+            talked: true
+            cards: ["9H", "5D"]
+          - playerName: "bot19"
+            id: "a553e3e0-573f-11f0-9bba-77b1210078e4"
+            chips: 873
+            folded: true
+            allIn: false
+            talked: true
+            cards: ["7S", "3S"]
+        actions:
+          - id: "3230aea0-4f4e-11f0-b48e-eb57f77f6ff2"
+            playerName: "D1w.4"
+            action: "fold"
+          - id: "a553e3e1-573f-11f0-9bba-77b1210078e4"
+            playerName: "bot20"
+            action: "call"
+            amount: 10
+          - id: "a553e3e0-573f-11f0-9bba-77b1210078e4"
+            playerName: "bot19"
+            action: "call"
+            amount: 10
+          - id: "a553e3e1-573f-11f0-9bba-77b1210078e4"
+            playerName: "bot20"
+            action: "bet"
+            amount: 117
+          - id: "a553e3e0-573f-11f0-9bba-77b1210078e4"
+            playerName: "bot19"
+            action: "call"
+            amount: 117
+          - id: "a553e3e1-573f-11f0-9bba-77b1210078e4"
+            playerName: "bot20"
+            action: "bet"
+            amount: 154
+          - id: "a553e3e0-573f-11f0-9bba-77b1210078e4"
+            playerName: "bot19"
+            action: "fold"
+        gameWinners:
+          - playerName: "bot20"
+            id: "a553e3e1-573f-11f0-9bba-77b1210078e4"
+            chips: 1127
+            amount: 408
+        created: 1751460422165
+paths:
+  /register:
+    post:
+      summary: Регистрация пользователя
+      description: |
+        Значения поля token ответа необходимо передавать в заголовках запроса других методов.
+        Токен уже имеет нужный формат просто передай его в заголовок
+        
+        Authorization: Bearer {token}
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/RegisterRequest'
+      responses:
+        '200':
+          description: Успешная регистрация
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RegisterResponse'
+        '400':
+          description: Ошибка регистрации
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+
+  /create-table:
+    post:
+      summary: Создать новый стол
+      security:
+        - BearerAuth: []
+      responses:
+        '200':
+          description: Стол создан
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CreateTableResponse'
+        '400':
+          description: Ошибка создания стола
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+
+  /join-table:
+    post:
+      summary: Присоединиться к столу по PIN
+      security:
+        - BearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/JoinTableRequest'
+      responses:
+        '200':
+          description: Стол и состояние игры
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TableInfo'
+        '400':
+          description: Ошибка присоединения
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+
+  /action:
+    post:
+      summary: Совершить действие за столом
+      description: |
+        Тип действия игрока:
+
+        - **call** – Уравнять текущую ставку (поставить столько же, сколько предыдущий игрок).
+        - **allin** – Поставить все свои оставшиеся фишки.
+        - **fold** – Сбросить карты и выйти из раздачи.
+        - **bet** – Сделать ставку.
+      security:
+        - BearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ActionRequest'
+      responses:
+        '200':
+          description: Актуальное состояние стола
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TableInfo'
+        '400':
+          description: Ошибка действия
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+
+  /table-info:
+    get:
+      summary: Получить состояние стола по PIN
+      security:
+        - BearerAuth: []
+      parameters:
+        - name: pin
+          in: query
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Текущее состояние стола
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TableInfo'
+        '400':
+          description: Ошибка получения
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+
+  /table-stats:
+    get:
+      summary: Получить результаты пройденных игр, которые создал текущий пользователь
+      security:
+        - BearerAuth: []
+      responses:
+        '200':
+          description: Массив созданных игроков столов
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/TableStatsItem'
+        '400':
+          description: Ошибка получения статистики
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+
+  /rank:
+    post:
+      summary: Определить комбинацию карт
+      description: |
+        Числовое значение ранга комбинации.
+        
+        - **Целая часть** – ранг комбинации от **1** (самая младшая) до **302** (самая старшая).
+        - **Дробная часть** – старшинство кикеров, вычисляемое по следующей прогрессии значений карт:
+        
+          | Карта | Значение кикера |
+          |-------|-----------------|
+          | A     | 0.2048          |
+          | K     | 0.1024          |
+          | Q     | 0.0512          |
+          | J     | 0.0256          |
+          | T     | 0.0128          |
+          | 9     | 0.0064          |
+          | 8     | 0.0032          |
+          | 7     | 0.0016          |
+          | 6     | 0.0008          |
+          | 5     | 0.0004          |
+          | 4     | 0.0002          |
+          | 3     | 0.0001          |
+          | 2     | 0.0000          |
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/RankRequest'
+      responses:
+        '200':
+          description: Ранг руки
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RankResponse'
